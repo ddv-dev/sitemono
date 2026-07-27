@@ -1,21 +1,23 @@
-/* Импорт всех частей */
+/* ============================================================
+   ПСМ-Монолит — главный файл стилей
+   ============================================================ */
+
+/* База */
 @import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Раскладка */
 @import 'layout/header.css';
+@import 'layout/footer.css';
+@import 'layout/sections.css';
 
-/* Дополнительные глобальные стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family);
-    color: var(--color-text);
-    background: var(--color-white);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-}
+/* Компоненты */
+@import 'components/buttons.css';
+@import 'components/chips.css';
+@import 'components/cards.css';
+@import 'components/forms.css';
+@import 'components/tables.css';
+@import 'components/calculator.css';
+@import 'components/hero.css';
+@import 'components/blocks.css';
