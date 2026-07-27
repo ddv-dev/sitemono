@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 
 
 </head>
@@ -14,7 +16,7 @@
 <body>
     @include('partials.header')
 
-    <main>
+    <main class="main">
         @yield('content')
     </main>
 

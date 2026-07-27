@@ -1,8 +1,10 @@
+
 /* Импорт всех частей */
 @import 'base/variables.css';
 @import 'layout/header.css';
+@import 'utilities/positions.css';
+@import 'components/buttons.css';
 
-/* Дополнительные глобальные стили */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +18,12 @@ body {
     line-height: 1.6;
 }
 
+.main {
+    display: flex;
+    padding: var(--header-height) 40px;
+}
+
 a {
     text-decoration: none;
 }
+

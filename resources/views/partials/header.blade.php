@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header column">
     <div class="container">
         <!-- Логотип -->
         <a href="/" class="logo">ПСМ</a>
@@ -17,6 +17,13 @@
         <!-- Кнопка -->
         <div class="nav-actions">
             <a href="/callback" class="btn-primary">Заказать звонок</a>
+        </div>
+    </div>
+
+    <div class="ssm-line">
+        <div>
+    <a href="tel:89915583888">8 (991) 558-38-88</a> 
+<span class=""></span>
         </div>
     </div>
 </header>
