@@ -16,10 +16,11 @@
                         <p class="fs-18 mt-20">Собственный завод. Марки М100–М500. Автобетонасосы 24–52 м с оператором.
                             Паспорт ГОСТ на каждую
                             партию.</p>
-                        <div class="row">
-                            <a href="" class="btn text-primary fs-18 fw-semibold btn-arrow-right">Рассчитать
+                        <div class="row gap-20 mt-20">
+                            <a href=""
+                                class="btn btn-primary btn-arrow-right-white fs-18 fw-semibold br-20">Рассчитать
                                 стоимость</a>
-                            <a href="">Смотреть прайс</a>
+                            <a href="" class="btn btn-primary-white fs-18 fw-semibold">Смотреть прайс</a>
                         </div>
                         <div class="row ghosts">
                             <div class="ghost"></div>

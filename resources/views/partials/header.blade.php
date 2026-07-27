@@ -15,7 +15,7 @@
         </nav>
 
         <div class="nav-actions">
-            <a href="/callback" class="btn btn-primary fw-semibold">Заказать звонок</a>
+            <a href="/callback" class="btn btn-primary fw-semibold br-6">Заказать звонок</a>
         </div>
     </div>
 
@@ -26,7 +26,7 @@
                 <span class="fs-14 text-white d-flex items-center">Перезвоним за 4 минуты</span>
             </div>
             <div class="smm-content-right">
-                <button class="btn text-primary fs-18 fw-semibold btn-arrow-right">Заказать бетон</button>
+                <button class="btn text-primary fs-18 fw-semibold btn-arrow-right br-6">Заказать бетон</button>
             </div>
         </div>
     </div>

@@ -6,7 +6,9 @@
 @import 'layout/home.css';
 @import 'utilities/positions.css';
 @import 'utilities/spacing.css';
+@import 'utilities/borders.css';
 @import 'components/buttons.css';
+
 * {
     margin: 0;
     padding: 0;
