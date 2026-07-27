@@ -1,9 +1,9 @@
 <header class="header column">
     <div class="container">
-        <!-- Логотип -->
-        <a href="/" class="logo">ПСМ</a>
+        <a href="/" class="logo">
+            <img src="{{ asset('images/base/logo.svg') }}" alt="ПСМ - Монолиг. Завод бетона и насосов">
+        </a>
 
-        <!-- Навигация -->
         <nav>
             <ul class="nav-links">
                 <li><a href="/" class="{{ request()->routeIs('/') ? 'active' : '' }}">Бетон</a></li>
@@ -14,16 +14,20 @@
             </ul>
         </nav>
 
-        <!-- Кнопка -->
         <div class="nav-actions">
-            <a href="/callback" class="btn-primary">Заказать звонок</a>
+            <a href="/callback" class="btn btn-primary fw-semibold">Заказать звонок</a>
         </div>
     </div>
 
-    <div class="ssm-line">
-        <div>
-    <a href="tel:89915583888">8 (991) 558-38-88</a> 
-<span class=""></span>
+    <div class="smm-line">
+        <div class="smm-content items-center jc-sb pi-80">
+            <div class=" d-flex smm-content-left gap-10">
+                <a href="tel:89915583888" class="text-white fw-bold fs-20">8 (991) 558-38-88</a>
+                <span class="fs-14 text-white d-flex items-center">Перезвоним за 4 минуты</span>
+            </div>
+            <div class="smm-content-right">
+                <button class="btn text-primary fs-18 fw-semibold btn-arrow-right">Заказать бетон</button>
+            </div>
         </div>
     </div>
 </header>

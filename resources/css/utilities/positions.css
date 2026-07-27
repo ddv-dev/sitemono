@@ -1,9 +1,67 @@
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+
+/* ========== FLEX ========== */
+.d-flex {
+    display: flex;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+/* ========== GRID ========== */
+.d-grid {
+    display: grid;
+}
+
+.d-inline-grid {
+    display: inline-grid;
+}
+
+/* ========== Остальные полезные display (опционально) ========== */
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-none {
+    display: none;
+}
+
+.flex-1{
+    display: flex;
+    flex: 1;
+}
+
+.flex-2{
+    display: flex;
+    flex: 2;
+}
+
+.w-full{
+    width: 100%;
 }
