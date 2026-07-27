@@ -1,0 +1,66 @@
+/* ============================================================
+   ПСМ-Монолит — дизайн-токены (из брендбука Figma)
+   ============================================================ */
+:root {
+    /* Акцент */
+    --orange: #f47b20;
+    --orange-600: #e06c15;
+    --orange-050: #fdf0e4;
+    --gold: #e8bd6a;
+
+    /* Тёмные (фоны / текст) */
+    --black: #0d0d0d;
+    --ink: #1c1c1c;
+    --ink-2: #1e1e1e;
+    --ink-3: #2a2a2a;
+    --ink-line: #333333;
+
+    /* Светлые (фоны секций) */
+    --paper: #f5f4f0;
+    --paper-2: #f2f1ed;
+    --paper-3: #fafaf7;
+    --white: #ffffff;
+
+    /* Линии / границы */
+    --line: #e5e3de;
+    --line-2: #ddd9d3;
+    --line-3: #e0ddd7;
+
+    /* Текст */
+    --text: #1c1c1c;
+    --text-2: #555555;
+    --muted: #888888;
+    --muted-2: #b0aca6;
+    --on-dark: #ffffff;
+    --on-dark-70: rgba(255, 255, 255, 0.72);
+    --on-dark-45: rgba(255, 255, 255, 0.45);
+    --on-dark-35: rgba(255, 255, 255, 0.35);
+    --on-dark-line: rgba(255, 255, 255, 0.10);
+
+    /* Типографика */
+    --font-head: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+    /* Радиусы */
+    --r-sm: 8px;
+    --r: 12px;
+    --r-lg: 16px;
+    --r-xl: 20px;
+    --r-pill: 999px;
+
+    /* Тени */
+    --shadow-sm: 0 2px 8px rgba(13, 13, 13, 0.06);
+    --shadow: 0 10px 34px rgba(13, 13, 13, 0.08);
+    --shadow-lg: 0 24px 60px rgba(13, 13, 13, 0.14);
+
+    /* Раскладка */
+    --container: 1320px;
+    --gutter: 40px;
+    --header-h: 72px;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --gutter: 20px;
+    }
+}

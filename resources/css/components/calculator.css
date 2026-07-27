@@ -1,0 +1,59 @@
+/* ============================================================
+   Калькулятор стоимости
+   ============================================================ */
+.calc {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+}
+.calc__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 18px;
+    align-items: end;
+}
+.calc__result {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.calc__result-label { font-size: 13px; color: var(--muted); }
+.calc__sum {
+    font-family: var(--font-head);
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+}
+.calc__sum small { font-size: 18px; color: var(--muted); font-weight: 600; }
+.calc__note { font-size: 13px; color: var(--muted); }
+.calc__addon {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px dashed var(--line-2);
+    border-radius: var(--r-sm);
+}
+.calc__addon input { accent-color: var(--orange); width: 16px; height: 16px; }
+
+@media (max-width: 820px) {
+    .calc__grid { grid-template-columns: 1fr 1fr; }
+    .calc__grid .btn { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+    .calc { padding: 22px; }
+    .calc__grid { grid-template-columns: 1fr; }
+    .calc__sum { font-size: 32px; }
+}

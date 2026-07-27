@@ -1,0 +1,63 @@
+/* ============================================================
+   Кнопки
+   ============================================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 15px 26px;
+    border-radius: var(--r-sm);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease, border-color .18s ease, transform .05s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+    background: var(--orange);
+    color: #fff;
+}
+.btn--primary:hover { background: var(--orange-600); }
+
+.btn--dark {
+    background: var(--black);
+    color: #fff;
+}
+.btn--dark:hover { background: #262626; }
+
+.btn--outline {
+    background: transparent;
+    border-color: var(--line-2);
+    color: var(--text);
+}
+.btn--outline:hover { border-color: var(--text); }
+
+.btn--ghost-light {
+    background: transparent;
+    border-color: var(--on-dark-35);
+    color: #fff;
+}
+.btn--ghost-light:hover { border-color: #fff; }
+
+.btn--block { width: 100%; }
+.btn--lg { padding: 18px 32px; font-size: 16px; }
+.btn--sm { padding: 11px 18px; font-size: 14px; }
+
+/* Текстовая ссылка со стрелкой */
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--orange);
+    transition: gap .18s ease;
+}
+.link-arrow:hover { gap: 12px; }

@@ -1,0 +1,73 @@
+/* ============================================================
+   Таблицы цен
+   ============================================================ */
+.price-table-wrap {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+}
+.table-scroll { overflow-x: auto; }
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+.price-table caption {
+    text-align: left;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--orange);
+    padding: 20px 24px 6px;
+    caption-side: top;
+}
+.price-table th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 14px 24px;
+    background: var(--paper-2);
+    border-bottom: 1px solid var(--line);
+}
+.price-table th:not(:first-child),
+.price-table td:not(:first-child) { text-align: right; }
+.price-table td {
+    padding: 15px 24px;
+    font-size: 15px;
+    border-bottom: 1px solid var(--line);
+}
+.price-table tbody tr:last-child td { border-bottom: none; }
+.price-table tbody tr:hover td { background: var(--paper-3); }
+.price-table .cell-name { font-weight: 600; }
+.price-table .cell-price { font-family: var(--font-head); font-weight: 700; color: var(--text); white-space: nowrap; }
+.price-table .cell-price s { color: var(--muted); font-weight: 400; margin-right: 6px; }
+
+.table-foot {
+    padding: 16px 24px;
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--paper-3);
+    border-top: 1px solid var(--line);
+}
+
+/* Простой список «строка со значением» */
+.spec-list { display: grid; }
+.spec-list__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+}
+.spec-list__row:last-child { border-bottom: none; }
+.spec-list__row dt { color: var(--muted); }
+.spec-list__row dd { font-weight: 600; text-align: right; }
+.section--dark .spec-list__row { border-color: var(--on-dark-line); }
+.section--dark .spec-list__row dt { color: var(--on-dark-70); }
+.section--dark .spec-list__row dd { color: #fff; }

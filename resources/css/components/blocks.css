@@ -1,0 +1,184 @@
+/* ============================================================
+   Блоки: шаги, статистика, отзывы, FAQ, CTA-баннер
+   ============================================================ */
+
+/* --- Шаги --- */
+.steps { display: grid; gap: 20px; }
+.steps--h { grid-template-columns: repeat(4, 1fr); }
+.step {
+    position: relative;
+    padding: 28px;
+    border-radius: var(--r-lg);
+    background: var(--white);
+    border: 1px solid var(--line);
+}
+.step__num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--orange); color: #fff;
+    font-family: var(--font-head); font-weight: 800; font-size: 16px;
+    margin-bottom: 18px;
+}
+.step h4 { font-family: var(--font-head); font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.step p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.section--dark .step { background: var(--ink); border-color: var(--ink-3); }
+.section--dark .step h4 { color: #fff; }
+.section--dark .step p { color: var(--on-dark-70); }
+@media (max-width: 980px) { .steps--h { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .steps--h { grid-template-columns: 1fr; } }
+
+/* --- Статистика --- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat-box {
+    padding: 30px;
+    border-radius: var(--r-lg);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--on-dark-line);
+}
+.stat-box b {
+    font-family: var(--font-head);
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+.stat-box span { display: block; margin-top: 10px; font-size: 14px; color: var(--on-dark-70); }
+.section--white .stat-box, .section--paper .stat-box, .section--paper2 .stat-box {
+    background: var(--white); border-color: var(--line);
+}
+.section--white .stat-box span, .section--paper .stat-box span, .section--paper2 .stat-box span { color: var(--muted); }
+@media (max-width: 900px) { .stats { grid-template-columns: 1fr 1fr; } }
+
+/* --- Отзывы --- */
+.reviews { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.review {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px;
+}
+.review__stars { color: var(--orange); letter-spacing: 3px; font-size: 15px; margin-bottom: 16px; }
+.review__text { font-size: 15px; line-height: 1.65; color: var(--text-2); }
+.review__author { display: flex; align-items: center; gap: 14px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+.review__ava {
+    width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--black); color: var(--orange);
+    font-family: var(--font-head); font-weight: 800;
+    flex: none;
+}
+.review__name { font-weight: 700; font-size: 15px; }
+.review__meta { font-size: 13px; color: var(--muted); }
+@media (max-width: 760px) { .reviews { grid-template-columns: 1fr; } }
+
+/* --- FAQ / аккордеон --- */
+.faq { display: grid; gap: 12px; max-width: 860px; }
+.faq__item {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+.faq__q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+}
+.faq__q .ic {
+    flex: none; width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--orange);
+    transition: transform .2s ease;
+}
+.faq__item.is-open .faq__q .ic { transform: rotate(45deg); }
+.faq__a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s ease;
+}
+.faq__a-inner { padding: 0 24px 22px; font-size: 15px; color: var(--muted); line-height: 1.6; }
+.section--dark .faq__item { background: var(--ink); border-color: var(--ink-3); }
+.section--dark .faq__q { color: #fff; }
+
+/* --- CTA телефон-баннер --- */
+.cta-phone {
+    background: var(--black);
+    color: #fff;
+}
+.cta-phone .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+.cta-phone__num {
+    font-family: var(--font-head);
+    font-weight: 900;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+.cta-phone__num:hover { color: var(--orange); }
+.cta-phone__meta { font-size: 14px; color: var(--on-dark-45); margin-top: 6px; }
+
+/* --- Карта зон / плейсхолдер изображения --- */
+.media-ph {
+    position: relative;
+    border-radius: var(--r-lg);
+    background:
+        linear-gradient(135deg, var(--ink-2), var(--ink));
+    border: 1px solid var(--ink-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--on-dark-35);
+    min-height: 260px;
+    overflow: hidden;
+}
+.media-ph--light {
+    background: repeating-linear-gradient(45deg, var(--paper-2) 0 14px, var(--paper) 14px 28px);
+    border-color: var(--line);
+    color: var(--muted-2);
+}
+.media-ph__label { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+.media-ph svg { opacity: 0.5; }
+
+/* Радар зон доставки */
+.radar {
+    aspect-ratio: 1;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(244, 123, 32, 0.10) 0%, transparent 70%);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.radar__ring { position: absolute; border: 1px dashed var(--line-2); border-radius: 50%; }
+.radar__ring.r1 { inset: 0; }
+.radar__ring.r2 { inset: 22%; }
+.radar__ring.r3 { inset: 44%; }
+.radar__core {
+    width: 66px; height: 66px; border-radius: 50%;
+    background: var(--orange); color: #fff;
+    display: grid; place-items: center;
+    font-family: var(--font-head); font-weight: 800; font-size: 12px; text-align: center;
+    box-shadow: 0 0 0 8px rgba(244, 123, 32, 0.16);
+}

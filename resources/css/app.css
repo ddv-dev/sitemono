@@ -1,0 +1,23 @@
+/* ============================================================
+   ПСМ-Монолит — главный файл стилей
+   ============================================================ */
+
+/* База */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Раскладка */
+@import 'layout/header.css';
+@import 'layout/footer.css';
+@import 'layout/sections.css';
+
+/* Компоненты */
+@import 'components/buttons.css';
+@import 'components/chips.css';
+@import 'components/cards.css';
+@import 'components/forms.css';
+@import 'components/tables.css';
+@import 'components/calculator.css';
+@import 'components/hero.css';
+@import 'components/blocks.css';

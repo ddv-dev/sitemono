@@ -1,0 +1,107 @@
+/* ============================================================
+   Карточки
+   ============================================================ */
+.card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.card:hover {
+    border-color: var(--line-2);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.card__ico {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--r);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange-050);
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+.card__ico svg { width: 26px; height: 26px; }
+
+.card__title {
+    font-family: var(--font-head);
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+.card__text {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Тёмная карточка */
+.card--dark {
+    background: var(--ink);
+    border-color: var(--ink-3);
+}
+.card--dark:hover { border-color: #3a3a3a; box-shadow: none; }
+.card--dark .card__title { color: #fff; }
+.card--dark .card__text { color: var(--on-dark-70); }
+.card--dark .card__ico { background: rgba(244, 123, 32, 0.14); }
+
+/* Карточка-продукт с ценой */
+.pcard {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px;
+    height: 100%;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.pcard:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.pcard__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.pcard__title { font-family: var(--font-head); font-size: 20px; font-weight: 700; }
+.pcard__text { font-size: 15px; color: var(--muted); line-height: 1.6; flex: 1; }
+.pcard__price {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+.pcard__price b { font-family: var(--font-head); font-size: 28px; font-weight: 800; color: var(--text); }
+.pcard__price span { font-size: 14px; color: var(--muted); }
+
+/* Мини-иконка (квадрат) */
+.sq-ico {
+    width: 46px; height: 46px;
+    border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--black); color: var(--orange);
+    flex: none;
+}
+.sq-ico svg { width: 22px; height: 22px; }
+
+/* Список преимуществ (иконка + текст) */
+.feat-list { display: grid; gap: 22px; }
+.feat {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.feat__ico {
+    width: 44px; height: 44px; flex: none;
+    border-radius: var(--r);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--orange-050); color: var(--orange);
+}
+.feat__ico svg { width: 22px; height: 22px; }
+.feat h4 { font-family: var(--font-head); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+.feat p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.section--dark .feat h4 { color: #fff; }
+.section--dark .feat p { color: var(--on-dark-70); }
+.section--dark .feat__ico { background: rgba(244, 123, 32, 0.14); }
