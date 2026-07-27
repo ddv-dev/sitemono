@@ -22,12 +22,12 @@
                                 стоимость</a>
                             <a href="" class="btn btn-primary-white fs-18 fw-semibold">Смотреть прайс</a>
                         </div>
-                        <div class="row ghosts">
-                            <div class="ghost"></div>
-                            <div class="ghost"></div>
-                            <div class="ghost"></div>
-                            <div class="ghost"></div>
-                            <div class="ghost"></div>
+                        <div class="mt-40 row gap-10 f-wrap">
+                            <div class="border-text bw-1 b-solid br-20 py-8 px-12 fs-14">ГОСТ 7473-2010</div>
+                            <div class="border-text bw-1 b-solid br-20 py-8 px-12 fs-14">Своя лаборатория</div>
+                            <div class="border-text bw-1 b-solid br-20 py-8 px-12 fs-14">НДС / без НДС</div>
+                            <div class="border-text bw-1 b-solid br-20 py-8 px-12 fs-14">Договор для юрлиц</div>
+                            <div class="border-text bw-1 b-solid br-20 py-8 px-12 fs-14">Бетон от 5 600 ₽/м³</div>
                         </div>
                     </div>
                 </div>

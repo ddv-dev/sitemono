@@ -61,3 +61,28 @@
 .br-30 {
     border-radius: 30px;
 }
+
+.bw-1 {
+    border-width: 1px;
+}
+
+.bw-2 {
+    border-width: 2px;
+}
+
+.bw-3 {
+    border-width: 3px;
+}
+
+.bw-4 {
+    border-width: 4px;
+}
+
+
+.border-text {
+    border-color: var(--color-text);
+}
+
+.b-solid{
+    border-style: solid;
+}
