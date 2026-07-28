@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: row;
 }
-.f-wrap{
+
+.f-wrap {
     flex-wrap: wrap;
 }
+
 .column {
     display: flex;
     flex-direction: column;
@@ -14,10 +16,13 @@
     justify-content: space-between;
 }
 
+.jc-center {
+    justify-content: center
+}
+
 .items-center {
     align-items: center;
 }
-
 
 /* ========== FLEX ========== */
 .d-flex {
@@ -54,16 +59,16 @@
     display: none;
 }
 
-.flex-1{
+.flex-1 {
     display: flex;
     flex: 1;
 }
 
-.flex-2{
+.flex-2 {
     display: flex;
     flex: 2;
 }
 
-.w-full{
+.w-full {
     width: 100%;
 }

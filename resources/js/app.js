@@ -1,1 +1,1 @@
-//
+import './components/why-cards';

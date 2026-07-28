@@ -86,16 +86,17 @@
 .main-content {
     padding-top: var(--header-height);
 }
-.smm-line{
+
+.smm-line {
     width: 100%;
     height: 100%;
     background-color: var(--color-primary);
 
 }
 
-.smm-content{
-    
+.smm-content {
+
     display: flex;
-height: 100%;
-    
+    height: 100%;
+
 }

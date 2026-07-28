@@ -1,3 +1,39 @@
-.hero-title{
+.hero-title {
     font-size: 78px;
+}
+
+.hero-block-content {
+    flex-direction: row;
+}
+
+.hero-block-content,
+.hero-block-bottom-wrapper {
+    padding-inline: 120px;
+}
+
+.hero-block-icon-container {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding: 4px;
+
+}
+
+.hero-block-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.hero-block-bottom {
+    border-top: 1px solid var(--color-shadow);
+}
+
+
+
+
+.why-section{
+    background-color: var(--color-black);
+}
+
+.why-container{
+    padding: 40px 120px;
 }
