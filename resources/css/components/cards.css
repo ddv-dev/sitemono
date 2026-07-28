@@ -1,299 +1,230 @@
-    .why-section {
-        padding: 80px 0;
-        background: #0a1a2e;
-        overflow: hidden;
-    }
+/* ---------- ОБЕРТКА ДЛЯ СКРОЛЛА ---------- */
+.why-grid-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Важно: вертикальный скролл отключен */
+    padding: 10px 0 30px;
+    margin: 0 -20px;
+    /* Компенсируем паддинг контейнера */
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: center;
+}
 
-    .why-container {
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+.why-grid-wrapper::-webkit-scrollbar {
+    height: 6px;
+    width: 0;
+    /* Убираем вертикальный скролл */
+}
 
-    .why-title {
-        font-size: 56px;
-        font-weight: 700;
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: 50px;
-    }
+.why-grid-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.why-grid-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.why-grid-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- СЕТКА: все карточки в один ряд ---------- */
+.why-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0 20px;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+/* ---------- КАРТОЧКА ---------- */
+.why-card {
+    flex: 0 0 160px;
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: flex 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.why-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+}
+
+/* ---------- ЛИЦЕВАЯ СТОРОНА (с перевернутым текстом) ---------- */
+.why-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: var(--color-gray-black);
+    border-radius: 24px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 28px var(--color-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.why-card:hover .why-card-front {
+    opacity: 0.9;
+}
 
 
-    /* ---------- ОБЕРТКА ДЛЯ СКРОЛЛА ---------- */
-    .why-grid-wrapper {
-        overflow-x: auto;
-        overflow-y: hidden;
-        /* Важно: вертикальный скролл отключен */
-        padding: 10px 0 30px;
-        margin: 0 -20px;
-        /* Компенсируем паддинг контейнера */
-        position: relative;
-        -webkit-overflow-scrolling: touch;
-        display: flex;
-        justify-content: center;
-    }
 
-    .why-grid-wrapper::-webkit-scrollbar {
-        height: 6px;
-        width: 0;
-        /* Убираем вертикальный скролл */
-    }
+/* ПЕРЕВЕРНУТЫЙ ЗАГОЛОВОК */
+.why-card-title.rotated {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-gray-cream);
+    letter-spacing: 2px;
+    text-align: center;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
 
-    .why-grid-wrapper::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-    }
+/* ---------- ЗАДНЯЯ СТОРОНА (детали) ---------- */
+.why-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: var(--color-gray-cream);
+    border-radius: 24px;
+    padding: 28px 24px;
+    transform: rotateY(180deg);
+    box-shadow: 0 12px 28px var(--color-shadow);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
 
-    .why-grid-wrapper::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-    }
 
-    .why-grid-wrapper::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
 
-    /* ---------- СЕТКА: все карточки в один ряд ---------- */
+.why-card-back-text {
+    font-size: 16px;
+    color: #2d4055;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.why-card-cta {
+    display: inline-block;
+    margin-top: auto;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1.5px dashed #b3cde0;
+    padding-bottom: 2px;
+    transition: 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* ---------- АКТИВНОЕ СОСТОЯНИЕ (расширение) ---------- */
+.why-card.active {
+    flex: 0 0 380px;
+}
+
+.why-card.active .why-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ---------- СКРОЛЛ ДЛЯ МОБИЛЬНЫХ ---------- */
+.why-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.why-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.why-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.why-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- АДАПТИВ ---------- */
+@media (max-width: 1200px) {
     .why-grid {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: 10px 0 20px;
-        height: 100%;
-        overflow-y: hidden;
+        justify-content: flex-start;
+        padding: 10px 20px 20px;
     }
 
-    /* ---------- КАРТОЧКА ---------- */
     .why-card {
-        flex: 0 0 160px;
-        height: 460px;
-        perspective: 1000px;
-        cursor: pointer;
-        transition: flex 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        flex: 0 0 150px;
     }
 
-    .why-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        transform-style: preserve-3d;
+    .why-card.active {
+        flex: 0 0 340px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .why-card {
+        flex: 0 0 130px;
+        height: 400px;
     }
 
-    /* ---------- ЛИЦЕВАЯ СТОРОНА (с перевернутым текстом) ---------- */
-    .why-card-front {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        background: #ffffff;
-        border-radius: 24px;
-        padding: 24px 16px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
-        transition: box-shadow 0.3s ease;
+    .why-card.active {
+        flex: 0 0 300px;
     }
 
-    .why-card:hover .why-card-front {
-        box-shadow: 0 20px 36px rgba(0, 0, 0, 0.1);
-    }
-
-    .why-card-number {
-        font-size: 14px;
-        font-weight: 600;
-        color: #a0b8d0;
-        letter-spacing: 0.02em;
-        margin-bottom: 12px;
-    }
-
-    /* ПЕРЕВЕРНУТЫЙ ЗАГОЛОВОК */
     .why-card-title.rotated {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.2;
-        color: #1c2a3a;
-        letter-spacing: 2px;
-        text-align: center;
-        max-height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        word-break: break-word;
+        font-size: 16px;
     }
 
-    /* ---------- ЗАДНЯЯ СТОРОНА (детали) ---------- */
     .why-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        background: #ffffff;
-        border-radius: 24px;
-        padding: 28px 24px;
-        transform: rotateY(180deg);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .why-card-back .why-card-number {
-        margin-bottom: 8px;
+        padding: 20px 16px;
     }
 
     .why-card-back-title {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1c2a3a;
-        margin-bottom: 12px;
-        line-height: 1.3;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-card {
+        flex: 0 0 110px;
+        height: 360px;
     }
 
-    .why-card-back-text {
-        font-size: 14px;
-        color: #2d4055;
-        line-height: 1.5;
-        margin-bottom: 12px;
-    }
-
-    .why-card-back-detail {
-        font-size: 14px;
-        color: #4a5b6e;
-        line-height: 1.6;
-        margin-bottom: 8px;
-    }
-
-    .why-card-back-list {
-        padding-left: 20px;
-        margin: 8px 0 12px;
-        font-size: 14px;
-        color: #4a5b6e;
-        line-height: 1.6;
-    }
-
-    .why-card-back-list li {
-        margin-bottom: 4px;
-    }
-
-    .why-card-cta {
-        display: inline-block;
-        margin-top: auto;
-        font-weight: 500;
-        color: #1e5b8a;
-        text-decoration: none;
-        border-bottom: 1.5px dashed #b3cde0;
-        padding-bottom: 2px;
-        transition: 0.2s;
-        font-size: 14px;
-        cursor: pointer;
-        align-self: flex-start;
-    }
-
-    .why-card-cta:hover {
-        color: #0d3b5e;
-        border-bottom-color: #1e5b8a;
-    }
-
-    /* ---------- АКТИВНОЕ СОСТОЯНИЕ (расширение) ---------- */
     .why-card.active {
-        flex: 0 0 380px;
+        flex: 0 0 280px;
     }
 
-    .why-card.active .why-card-inner {
-        transform: rotateY(180deg);
+    .why-card-title.rotated {
+        font-size: 14px;
     }
 
-    /* ---------- СКРОЛЛ ДЛЯ МОБИЛЬНЫХ ---------- */
-    .why-grid::-webkit-scrollbar {
-        height: 6px;
-    }
 
-    .why-grid::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-    }
-
-    .why-grid::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-    }
-
-    .why-grid::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    /* ---------- АДАПТИВ ---------- */
-    @media (max-width: 1200px) {
-        .why-grid {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            justify-content: flex-start;
-            padding: 10px 20px 20px;
-        }
-
-        .why-card {
-            flex: 0 0 150px;
-        }
-
-        .why-card.active {
-            flex: 0 0 340px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .why-title {
-            font-size: 36px;
-        }
-
-        .why-card {
-            flex: 0 0 130px;
-            height: 400px;
-        }
-
-        .why-card.active {
-            flex: 0 0 300px;
-        }
-
-        .why-card-title.rotated {
-            font-size: 16px;
-        }
-
-        .why-card-back {
-            padding: 20px 16px;
-        }
-
-        .why-card-back-title {
-            font-size: 16px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .why-card {
-            flex: 0 0 110px;
-            height: 360px;
-        }
-
-        .why-card.active {
-            flex: 0 0 280px;
-        }
-
-        .why-card-title.rotated {
-            font-size: 14px;
-        }
-
-        .why-section {
-            padding: 40px 0;
-        }
-
-        .why-title {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-    }
+}

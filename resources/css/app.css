@@ -3,6 +3,7 @@
 @import 'base/typography.css';
 @import 'layout/header.css';
 @import 'layout/home.css';
+@import 'layout/calculator.css';
 @import 'utilities/positions.css';
 @import 'utilities/spacing.css';
 @import 'utilities/borders.css';
