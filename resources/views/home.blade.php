@@ -4,14 +4,14 @@
 
 @section('content')
 
-    @include('partials.hero')
+    @include('home.hero')
 
-    @include('partials.why')
+    @include('home.why')
 
-    @include('partials.calculator')
+    @include('home.calculator')
 
-    @include('partials.services')
+    @include('home.services')
 
-    @include('partials.process')
+    @include('home.process')
 
 @endsection

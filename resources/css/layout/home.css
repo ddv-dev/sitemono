@@ -6,10 +6,6 @@
     flex-direction: row;
 }
 
-.hero-block-content,
-.hero-block-bottom-wrapper {
-    padding-inline: 120px;
-}
 
 .hero-block-icon-container {
     background-color: var(--color-primary);

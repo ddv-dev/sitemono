@@ -1,5 +1,5 @@
     <section class="hero-block w-full">
-        <div class="hero-block-wrapper">
+        <div class="hero-block-wrapper container">
             <div class="hero-block-top">
                 <div class="fs-14 mt-20 mb-20 fw-normal text-default">Производство бетона · Подмосковье · с 2009 года</div>
             </div>

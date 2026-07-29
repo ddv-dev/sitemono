@@ -51,104 +51,12 @@
 
 
         <div class="d-flex flex-1">
-            @include('partials.main_form')
+            @include('partials.form')
         </div>
     </div>
 </section>
 
 <style>
-    .process-step {
-        border-bottom: 1px solid #e9eef4;
-        transition: background 0.3s ease;
-        padding: 4px 0;
-    }
-
-    .process-step:last-child {
-        border-bottom: none;
-    }
-
-    .step-header {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding: 16px 20px;
-        cursor: pointer;
-        user-select: none;
-        transition: background 0.2s ease;
-        border-radius: 8px;
-    }
-
-    .step-header:hover {
-        background: var(--color-gray-cream);
-    }
-
-    .step-number {
-        font-weight: 700;
-        color: var(--color-text-muted);
-    }
-
-    .step-title {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1c2a3a;
-        flex: 1;
-    }
-
-    .step-toggle {
-        font-size: 24px;
-        color: #a0b8d0;
-        transition: transform 0.3s ease;
-        flex-shrink: 0;
-        width: 32px;
-        text-align: center;
-    }
-
-    .process-step.open .step-toggle {
-        transform: rotate(45deg);
-    }
-
-    .step-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease, padding 0.4s ease;
-        padding: 0 56px 0 48px;
-    }
-
-    .process-step.open .step-content {
-        max-height: 300px;
-        padding: 0 56px 20px 48px;
-    }
-
-    .step-content p {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #4a5b6e;
-        margin: 0;
-    }
-
-    @media (max-width: 600px) {
-        .step-header {
-            padding: 14px 0;
-            gap: 12px;
-        }
-
-        .step-title {
-            font-size: 15px;
-        }
-
-        .step-content {
-            padding: 0 16px 0 36px;
-        }
-
-        .process-step.open .step-content {
-            padding: 0 16px 16px 36px;
-        }
-
-        .step-toggle {
-            font-size: 20px;
-            width: 24px;
-        }
-    }
 </style>
 
 @push('scripts')
