@@ -7,6 +7,8 @@
 @import 'utilities/positions.css';
 @import 'utilities/spacing.css';
 @import 'utilities/borders.css';
+@import 'utilities/text.css';
+@import 'utilities/backgrounds.css';
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/panels.css';

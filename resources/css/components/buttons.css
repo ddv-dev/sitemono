@@ -6,12 +6,19 @@
     transition: background 0.9s ease;
     border: none;
     height: fit-content;
+    width:  fit-content;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .btn-primary {
     background: var(--color-primary);
     color: var(--color-white);
+}
+.btn-black{
+    border-radius: 8px;
+    background-color: var(--color-black);
+    color: var(--color-gray-cream);
 }
 
 .btn-primary:hover {

@@ -226,18 +226,7 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <section class="calculator-section py-40" id="calculator">
+    <section class="calculator-section py-40 section-bottom" id="calculator">
         <div class="container">
             <h2 class="section-title  mb-20">Рассчитать стоимость</h2>
 
@@ -330,25 +319,27 @@
         </script>
     @endpush
 
-    <section>
+    <section class="py-40 bg-cream">
         <div class="container d-flex row">
-            <div class="d-flex column flex-1">
-                <h3></h3>
-                <p></p>
-                <a href=""></a>
+            <div class="d-flex column flex-1 gap-20">
+                <h3 class="fs-40 fw-bold">Всё, что нужно для стройки</h3>
+                <p class="line-h-140">Собственный завод — никаких посредников и наценок. Один звонок закрывает бетон и
+                    насос.</p>
+                <a href="" class="btn btn-black btn-arrow-right-white ">Смотреть цены</a>
             </div>
 
-            <div class="grid-svc">
+            <div class="grid-container flex-2">
 
-                <div class="svc-card">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <h3></h3>
-                    <p></p>
+                <div class="d-flex column  gap-10">
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
+                        alt="ПСМ - Монолиг. Завод бетона и насосов">
+                    <h3 class="fs-22">Бетон с доставкой</h3>
+                    <p class="line-h-140">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
+                        на каждой машине,
+                        паспорт ГОСТ.</p>
                     <div class="svc-price row gap-10">
-                        <span></span>
-                        <span></span>
+                        <span>от 5 600 ₽</span>
+                        <span>/ м³</span>
                     </div>
                 </div>
 

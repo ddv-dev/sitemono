@@ -86,3 +86,7 @@
 .b-solid {
     border-style: solid;
 }
+
+.section-bottom{
+    border-bottom: 1px solid var(--color-shadow);
+}
