@@ -4,3 +4,7 @@
 .bg-cream{
     background-color: var(--color-gray-cream);
 }
+
+.bg-black{
+    background-color: var(--color-black);
+}

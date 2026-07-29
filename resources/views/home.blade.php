@@ -14,4 +14,6 @@
 
     @include('home.process')
 
+    @include('partials.contacts')
+
 @endsection

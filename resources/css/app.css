@@ -15,6 +15,7 @@
 @import 'components/grids.css';
 @import 'components/panels.css';
 @import 'components/process-steps.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ body {
 }
 
 .main {
-    padding: var(--header-height) 0;
+    padding-top: var(--header-height) 0;
 }
 
 a {
