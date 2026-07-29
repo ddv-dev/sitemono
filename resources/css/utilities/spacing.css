@@ -841,6 +841,9 @@
 .ml-0 {
     margin-left: 0 !important;
 }
+.ml-a {
+    margin-left: auto !important;
+}
 
 .mr-0 {
     margin-right: 0 !important;

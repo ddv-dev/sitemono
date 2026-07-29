@@ -1,0 +1,12 @@
+.input-black{
+    border: 1px solid var(--color-text);
+    color: var(--color-gray-cream);
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--color-gray-dark);
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+.input-black:focus{
+    background-color: var(--color-text-muted);
+}

@@ -1,6 +1,15 @@
-.panel-white{
+.panel-white {
     background-color: white;
+    border: 1px solid var(--color-stroke-white);
+}
+
+.panel-black {
+    background-color: var(--color-black);
+
+    border: 1px solid var(--color-gray-dark);
+}
+
+.panel {
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid var(--color-stroke-white);
 }
