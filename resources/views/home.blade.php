@@ -310,13 +310,6 @@
                                         @endforeach
                                     </div>
                                 @endif
-
-                                @if ($services->isNotEmpty())
-                                    <button class="btn-add-service" id="addServiceBtn">
-                                        Добавить {{ $services->first()->name }}
-                                    </button>
-                                @endif
-
                             </div>
                         </div>
 
@@ -336,4 +329,31 @@
             });
         </script>
     @endpush
+
+    <section>
+        <div class="container d-flex row">
+            <div class="d-flex column flex-1">
+                <h3></h3>
+                <p></p>
+                <a href=""></a>
+            </div>
+
+            <div class="grid-svc">
+
+                <div class="svc-card">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <h3></h3>
+                    <p></p>
+                    <div class="svc-price row gap-10">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 @endsection
