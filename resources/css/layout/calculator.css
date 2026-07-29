@@ -1,10 +1,7 @@
-.calculator-section {
-        padding: 60px 0;
-        background: #f5f7fa;
-        min-height: 100vh;
-    }
-
-    .calculator-container {
+.calculator-section{
+    background-color: var(--color-gray-cream);
+}
+.calculator-container {
         max-width: 1100px;
         margin: 0 auto;
         padding: 0 20px;
@@ -21,12 +18,7 @@
     .calculator-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
         align-items: start;
-        background: #ffffff;
-        border-radius: 24px;
-        padding: 40px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
     }
 
     /* ---------- FORM ---------- */
@@ -192,39 +184,6 @@
     .service-switch:has(input:checked) {
         background: #e8f0fe;
         border-color: #2b6c9e;
-    }
-
-    /* ---------- SUBMIT BUTTON ---------- */
-    .btn-submit {
-        padding: 14px 32px;
-        background: #2b6c9e;
-        color: #ffffff;
-        border: none;
-        border-radius: 12px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 8px;
-        width: 100%;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .btn-submit:hover {
-        background: #1e5b8a;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(43, 108, 158, 0.3);
-    }
-
-    .btn-submit:active {
-        transform: translateY(0);
-    }
-
-    .btn-submit:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-        transform: none;
     }
 
     /* ---------- RESULT ---------- */

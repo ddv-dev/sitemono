@@ -5,6 +5,7 @@
     font-size: 1rem;
     transition: background 0.9s ease;
     border: none;
+    height: fit-content;
     cursor: pointer;
 }
 
