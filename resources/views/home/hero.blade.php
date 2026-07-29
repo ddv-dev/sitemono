@@ -1,10 +1,11 @@
     <section class="hero-block w-full">
-        <div class="hero-block-wrapper container">
+        <div class="hero-block-wrapper container section-bottom">
             <div class="hero-block-top">
-                <div class="fs-14 mt-20 mb-20 fw-normal text-default">Производство бетона · Подмосковье · с 2009 года</div>
+                <div class="fs-14 mt-20 mb-20 fw-normal text-default">Производство бетона · Подмосковье · с 2009 года
+                </div>
             </div>
 
-            <div class="hero-block-content d-flex gap-40 mb-40">
+            <div class="hero-block-content d-flex gap-40 mb-40 ">
                 <div class="hero-block-content-left flex-1">
                     <div class="column">
                         <h1 class="hero-title text-default">Бетон и бетонный насос — один заказ, одна накладная</h1>
@@ -46,37 +47,8 @@
             </div>
 
 
-            <div class="hero-block-bottom mb-40">
-                <div class="hero-block-bottom-wrapper mt-40 row gap-40 jc-center">
-                    <div class="d-flex items-center gap-10">
-                        <div class="hero-block-icon-container ">
-                            <img class="hero-block-icon" src="{{ asset('images/ui/icons/done.svg') }}"
-                                alt="ПСМ - Монолиг. Завод бетона и насосов">
-                        </div>
-                        <span class="fs-14 text-default">Паспорт качества с каждой машиной</span>
-                    </div>
-                    <div class="d-flex items-center gap-10">
-                        <div class="hero-block-icon-container ">
-                            <img class="hero-block-icon" src="{{ asset('images/ui/icons/time.svg') }}"
-                                alt="ПСМ - Монолиг. Завод бетона и насосов">
-                        </div>
-                        <span class="fs-14 text-default">Выезд от 2 часов</span>
-                    </div>
-                    <div class="d-flex items-center gap-10">
-                        <div class="hero-block-icon-container ">
-                            <img class="hero-block-icon" src="{{ asset('images/ui/icons/enum.svg') }}"
-                                alt="ПСМ - Монолиг. Завод бетона и насосов">
-                        </div>
-                        <span class="fs-14 text-default">Бетон + насос — 1 заказ</span>
-                    </div>
-                    <div class="d-flex items-center gap-10">
-                        <div class="hero-block-icon-container ">
-                            <img class="hero-block-icon" src="{{ asset('images/ui/icons/home.svg') }}"
-                                alt="ПСМ - Монолиг. Завод бетона и насосов">
-                        </div>
-                        <span class="fs-14 text-default">Работаем с 2009 года</span>
-                    </div>
-                </div>
-            </div>
+
         </div>
+            @include('partials.qualities')
+
     </section>

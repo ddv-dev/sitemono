@@ -6,7 +6,7 @@
 
         <nav>
             <ul class="nav-links">
-                <li><a href="/" class="{{ request()->routeIs('/') ? 'active' : '' }}">Бетон</a></li>
+                <li><a href="/concrete" class="{{ request()->routeIs('/concrete') ? 'active' : '' }}">Бетон</a></li>
                 <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
                 <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
                 <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>

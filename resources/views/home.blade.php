@@ -8,7 +8,7 @@
 
     @include('home.why')
 
-    @include('home.calculator')
+    @include('partials.calculator')
 
     @include('home.services')
 

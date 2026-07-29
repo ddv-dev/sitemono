@@ -30,7 +30,7 @@ body {
 }
 
 .main {
-    padding-top: var(--header-height) 0;
+    padding-top: var(--header-height);
 }
 
 a {

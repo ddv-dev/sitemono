@@ -12,9 +12,9 @@
                <form action="">
                    <div class="row gap-20 py-20">
                        <input type="text" class="input-black d-flex flex-1" placeholder="Имя">
-                       <input type="text" class="input-black d-flex flex-1" placeholder="Имя">
+                       <input type="text" class="input-black d-flex flex-1" placeholder="Номер телефона">
                    </div>
-                   <input type="text" class="input-black d-flex flex-1" placeholder="Имя">
+                   <input type="text" class="input-black d-flex flex-1" placeholder="Адрес доставки">
                    <div class="row gap-20 py-20 items-center">
 
                        <input type="submit" class="btn btn-primary btn-arrow-right-white br-8"

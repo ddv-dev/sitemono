@@ -11,14 +11,17 @@ use App\Models\AdditionalService;
 
 class CalculatorController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $types = ConcreteType::active()->ordered()->get();
         $grades = ConcreteGrade::active()->ordered()->get();
         $services = AdditionalService::active()->ordered()->get();
 
-        // Возвращаем главную страницу с калькулятором
-        return view('home', compact('types', 'grades', 'services'));
+    $page = $request->route()->defaults['page'] ?? 'home';
+    
+    return view($page, compact('types', 'grades', 'services'));
+
+
     }
 
     public function calculate(Request $request)
