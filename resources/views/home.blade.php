@@ -330,19 +330,56 @@
 
             <div class="grid-container flex-2">
 
-                <div class="d-flex column  gap-10">
+                <div class="d-flex column  gap-10 panel panel-white">
                     <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
                         alt="ПСМ - Монолиг. Завод бетона и насосов">
                     <h3 class="fs-22">Бетон с доставкой</h3>
-                    <p class="line-h-140">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
+                    <p class="line-h-140 fw-normal">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
                         на каждой машине,
                         паспорт ГОСТ.</p>
-                    <div class="svc-price row gap-10">
-                        <span>от 5 600 ₽</span>
-                        <span>/ м³</span>
+                    <div class="svc-price row gap-2">
+                        <span class="fs-20 fw-bold text-primary">от 5 600 ₽</span>
+                        <span class="mt-a fs-14 fw-semibold">/м³</span>
+                    </div>
+                </div>
+               <div class="d-flex column  gap-10 panel panel-white">
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
+                        alt="ПСМ - Монолиг. Завод бетона и насосов">
+                    <h3 class="fs-22">Бетон с доставкой</h3>
+                    <p class="line-h-140 fw-normal">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
+                        на каждой машине,
+                        паспорт ГОСТ.</p>
+                    <div class="svc-price row gap-2">
+                        <span class="fs-20 fw-bold text-primary">от 5 600 ₽</span>
+                        <span class="mt-a fs-14 fw-semibold">/м³</span>
                     </div>
                 </div>
 
+                               <div class="d-flex column  gap-10 panel panel-white">
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
+                        alt="ПСМ - Монолиг. Завод бетона и насосов">
+                    <h3 class="fs-22">Бетон с доставкой</h3>
+                    <p class="line-h-140 fw-normal">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
+                        на каждой машине,
+                        паспорт ГОСТ.</p>
+                    <div class="svc-price row gap-2">
+                        <span class="fs-20 fw-bold text-primary">от 5 600 ₽</span>
+                        <span class="mt-a fs-14 fw-semibold">/м³</span>
+                    </div>
+                </div>
+
+                               <div class="d-flex column  gap-10 panel panel-white">
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
+                        alt="ПСМ - Монолиг. Завод бетона и насосов">
+                    <h3 class="fs-22">Бетон с доставкой</h3>
+                    <p class="line-h-140 fw-normal">Товарный бетон марок М100–М500 с доставкой по всему МО. Собственный автопарк, GPS
+                        на каждой машине,
+                        паспорт ГОСТ.</p>
+                    <div class="svc-price row gap-2">
+                        <span class="fs-20 fw-bold text-primary">от 5 600 ₽</span>
+                        <span class="mt-a fs-14 fw-semibold">/м³</span>
+                    </div>
+                </div>
             </div>
 
         </div>
