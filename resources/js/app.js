@@ -5,6 +5,7 @@ import './components/why-cards';
 // Импортируем калькулятор
 import Calculator from './calculator/calculator.js';
 import { initCalculator } from './calculator/init.js';
+import { initProcessSteps, toggleStepWithClose } from './components/process-steps.js';
 
 // Экспортируем для глобального использования
 window.Calculator = Calculator;

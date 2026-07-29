@@ -384,4 +384,22 @@
 
         </div>
     </section>
+
+@include('partials.process')
+
+    <section class="py-40">
+        <div class="container">
+            <div class="d-flex column flex-1">
+                
+                <div class="fs-40"></div>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="d-flex flex-1">
+
+            </div>
+        </div>
+    </section>
 @endsection
