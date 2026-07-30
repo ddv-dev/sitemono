@@ -11,7 +11,6 @@ Route::post('/calculator/get-price', [CalculatorController::class, 'getPrice'])-
 
 // Страница с ценами
 Route::get('/prices', [PriceController::class, 'index'])->name('prices');
-
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');
 Route::get('/concrete', [CalculatorController::class, 'index'])->name('concrete')->defaults('page', 'concrete');
