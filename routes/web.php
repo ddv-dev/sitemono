@@ -13,6 +13,7 @@ Route::post('/calculator/get-price', [CalculatorController::class, 'getPrice'])-
 Route::get('/prices', [PriceController::class, 'index'])->name('prices');
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');
+Route::get('/prices', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'prices');
 Route::get('/concrete', [CalculatorController::class, 'index'])->name('concrete')->defaults('page', 'concrete');
 Route::get('/pumps', [CalculatorController::class, 'index'])->name('pumps')->defaults('page', 'pumps');
 Route::get('/about', [CalculatorController::class, 'index'])->name('about')->defaults('page', 'about');

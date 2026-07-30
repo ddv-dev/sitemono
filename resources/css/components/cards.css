@@ -269,7 +269,17 @@
 
 }
 
-.qualities-card .icon-inner img {
+.qualities-card .icon-inner img, .terms-card img {
     width: 32px;
     height: 32px;
+}
+.terms-card{
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border: 2px solid var(--color-shadow);
+    border-radius: 20px;
+    height: auto;
+    flex: 1;
 }
