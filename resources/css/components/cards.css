@@ -239,7 +239,7 @@
 
 
 
-.choose-card{
+.choose-card {
     padding: 18px;
     display: flex;
     flex-direction: column;
@@ -248,4 +248,28 @@
     border-radius: 20px;
     max-width: 280px;
     height: auto;
+}
+
+.qualities-card {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border: 2px solid var(--color-text-muted);
+    border-radius: 20px;
+    height: auto;
+    flex: 1;
+}
+
+.qualities-card .icon-inner {
+    background-color: var(--color-primary);
+    padding: 6px;
+    border-radius: 12px;
+    width: fit-content;
+
+}
+
+.qualities-card .icon-inner img {
+    width: 32px;
+    height: 32px;
 }
