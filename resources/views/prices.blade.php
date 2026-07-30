@@ -9,5 +9,5 @@
     @include('partials.calculator')
     @include('prices.terms')
 
-
-@endsection
+ @endsection
+ 

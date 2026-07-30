@@ -9,8 +9,6 @@ use App\Http\Controllers\PriceController;
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
 Route::post('/calculator/get-price', [CalculatorController::class, 'getPrice'])->name('calculator.get-price');
 
-// Страница с ценами
-Route::get('/prices', [PriceController::class, 'index'])->name('prices');
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');
 Route::get('/prices', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'prices');
