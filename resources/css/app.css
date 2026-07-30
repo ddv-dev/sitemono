@@ -15,6 +15,7 @@
 @import 'components/grids.css';
 @import 'components/panels.css';
 @import 'components/process-steps.css';
+@import 'components/tables.css';
 
 * {
     margin: 0;

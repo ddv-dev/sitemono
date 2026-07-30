@@ -17,11 +17,25 @@ class CalculatorController extends Controller
         $grades = ConcreteGrade::active()->ordered()->get();
         $services = AdditionalService::active()->ordered()->get();
 
-    $page = $request->route()->defaults['page'] ?? 'home';
-    
-    return view($page, compact('types', 'grades', 'services'));
+        // Получаем все цены для таблицы (для partials.price)
+        $prices = ConcretePrice::with(['type', 'grade'])
+            ->active()
+            ->get()
+            ->map(function ($price) {
+                return [
+                    'id' => $price->id,
+                    'type_name' => $price->type->name,
+                    'grade_class' => $price->grade->class,
+                    'grade_name' => $price->grade->name,
+                    'price' => $price->price,
+                    'formatted_price' => number_format($price->price, 0, ',', ' ') . ' ₽',
+                ];
+            });
 
-
+        $page = $request->route()->defaults['page'] ?? 'home';
+        
+        // Передаем все переменные в шаблон, включая $prices
+        return view($page, compact('types', 'grades', 'services', 'prices'));
     }
 
     public function calculate(Request $request)

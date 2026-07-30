@@ -6,6 +6,7 @@
     @include('concrete.hero')
     @include('partials.qualities')
 
+    @include('partials.price')
     @include('partials.calculator')
 
 

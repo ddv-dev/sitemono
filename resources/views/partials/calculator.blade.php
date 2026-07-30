@@ -1,6 +1,6 @@
     <section class="calculator-section py-40 section-bottom" id="calculator">
         <div class="container">
-            <h2 class="section-title  mb-20">Рассчитать стоимость</h2>
+            <h2 class="fs-40 fw-bold  mb-32">Рассчитать стоимость</h2>
 
 
             <div class="panel panel-white ">
@@ -79,14 +79,3 @@
             </div>
         </div>
     </section>
-    @push('scripts')
-        @vite(['resources/js/app.js'])
-
-        <script>
-            // Дополнительная инициализация если нужно
-            document.addEventListener('DOMContentLoaded', function() {
-                // Все инициализируется через app.js
-                console.log('Калькулятор инициализирован через Vite');
-            });
-        </script>
-    @endpush
