@@ -9,5 +9,6 @@
     @include('partials.price')
     @include('partials.calculator')
 
+    @include('concrete.choose')
 
 @endsection

@@ -228,3 +228,24 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+.choose-card{
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid var(--color-shadow);
+    border-radius: 20px;
+    max-width: 280px;
+    height: auto;
+}
