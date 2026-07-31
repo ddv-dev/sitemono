@@ -6,8 +6,9 @@
 
     @include('prices.hero')
 
+    @include('partials.pumps')
+    @include('partials.price')
     @include('partials.calculator')
     @include('prices.terms')
-    @include('partials.pumps')
 
 @endsection

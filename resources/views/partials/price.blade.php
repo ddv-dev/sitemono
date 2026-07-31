@@ -1,6 +1,5 @@
 @if (isset($prices) && $prices->count() > 0)
     <section class="container py-40">
-        <div class="fw-medium fs-18 mb-16">— Прайс-лист</div>
 
         <h1 class="mb-36">Цены на бетон</h1>
         @php

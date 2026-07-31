@@ -3,8 +3,6 @@
 
 @if (isset($pumps) && $pumps->count() > 0)
     <section class="container py-40">
-        <div class="fw-medium fs-18 mb-16">— Прайс-лист</div>
-
         <h1 class="mb-36">Стоимость аренды автобетононасоса</h1>
 
         <table class="price-table mt-20">
