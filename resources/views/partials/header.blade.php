@@ -4,7 +4,7 @@
             <img src="{{ asset('images/base/logo.svg') }}" alt="ПСМ - Монолиг. Завод бетона и насосов">
         </a>
 
-        <nav>
+        <nav class="main-nav">
             <ul class="nav-links">
                 <li><a href="/concrete" class="{{ request()->routeIs('/concrete') ? 'active' : '' }}">Бетон</a></li>
                 <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
@@ -17,6 +17,13 @@
         <div class="nav-actions">
             <a href="/callback" class="btn btn-primary fw-semibold br-6">Заказать звонок</a>
         </div>
+
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false"
+            aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 
     <div class="smm-line">
@@ -31,3 +38,24 @@
         </div>
     </div>
 </header>
+
+{{-- Мобильное меню (скрыто на десктопе) --}}
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+        <ul class="mobile-nav-links">
+            <li><a href="/concrete" class="{{ request()->routeIs('/concrete') ? 'active' : '' }}">Бетон</a></li>
+            <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
+            <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
+            <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
+            <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu-footer">
+        <a href="tel:89915583888" class="text-primary fw-bold fs-22">8 (991) 558-38-88</a>
+        <span class="fs-14 text-muted">Перезвоним за 4 минуты</span>
+        <a href="/callback" class="btn btn-primary fw-semibold br-6 w-full text-center">Заказать звонок</a>
+    </div>
+</div>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>

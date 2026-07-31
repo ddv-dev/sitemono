@@ -100,3 +100,186 @@
     height: 100%;
 
 }
+
+/* ==========================================================================
+   Мобильное меню — «бургер»
+   Кнопка и панель скрыты на десктопе, включаются в media-запросе ниже.
+   ========================================================================== */
+
+/* Кнопка-бургер (скрыта на десктопе) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Крестик в открытом состоянии */
+.nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Выезжающая панель меню (скрыта на десктопе) */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: min(320px, 85vw);
+    height: calc(100vh - var(--header-height));
+    background: var(--color-white);
+    box-shadow: -4px 0 16px var(--color-shadow);
+    padding: 24px;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-nav-links a {
+    display: block;
+    padding: 12px 8px;
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+    font-size: 18px;
+    border-radius: 8px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+    color: var(--color-primary);
+    background: var(--color-gray-cream);
+}
+
+.mobile-menu-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-stroke-white);
+}
+
+/* Затемнение под меню (скрыто на десктопе) */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-menu-overlay.is-open {
+    display: block;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Планшет / телефон: сворачиваем навигацию в бургер
+   ========================================================================== */
+@media (max-width: 900px) {
+
+    /* Компактная шапка: логотип + бургер, ниже — телефонная строка */
+    .header {
+        height: auto;
+    }
+
+    .header .container {
+        max-width: 100%;
+        height: 64px;
+        padding: 0 16px;
+    }
+
+    /* Прячем десктопную навигацию и CTA */
+    .main-nav,
+    .header .nav-actions {
+        display: none;
+    }
+
+    /* Показываем бургер и панель */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .logo img {
+        height: 36px;
+        width: auto;
+    }
+
+    /* Телефонная строка — компактнее */
+    .header .smm-content {
+        height: 44px;
+        padding-inline: 16px !important;
+        gap: 12px;
+    }
+
+    .smm-content-left {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .smm-content .fs-20 {
+        font-size: 16px;
+    }
+
+    .smm-content .btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Совсем узкие экраны: убираем вторичный текст и укорачиваем строку */
+    .smm-content .smm-content-left span {
+        display: none;
+    }
+
+    .smm-content .btn {
+        white-space: nowrap;
+    }
+}

@@ -1,6 +1,7 @@
 // resources/js/app.js
 
 import './components/why-cards';
+import './components/nav';
 
 // Импортируем калькулятор
 import Calculator from './calculator/calculator.js';

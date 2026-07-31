@@ -1,14 +1,28 @@
-/* Импорт всех частей */
+/* ==========================================================================
+   Точка входа стилей.
+   Файл содержит ТОЛЬКО импорты — базовые правила вынесены в base/reset.css.
+   Порядок важен: base → layout → utilities → components → responsive (в конце,
+   чтобы адаптивные переопределения имели приоритет).
+   ========================================================================== */
+
+/* Base */
 @import 'base/variables.css';
+@import 'base/reset.css';
 @import 'base/typography.css';
+
+/* Layout */
 @import 'layout/header.css';
 @import 'layout/home.css';
 @import 'layout/calculator.css';
+
+/* Utilities */
 @import 'utilities/positions.css';
 @import 'utilities/spacing.css';
 @import 'utilities/borders.css';
 @import 'utilities/text.css';
 @import 'utilities/backgrounds.css';
+
+/* Components */
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/forms.css';
@@ -17,31 +31,5 @@
 @import 'components/process-steps.css';
 @import 'components/tables.css';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family);
-    color: var(--color-text);
-    background: var(--color-white);
-    line-height: 1;
-}
-
-.main {
-    padding-top: var(--header-height);
-}
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    margin: 0;
-}
-
-.container {
-    padding-inline: 120px;
-}
+/* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
+@import 'layout/responsive.css';

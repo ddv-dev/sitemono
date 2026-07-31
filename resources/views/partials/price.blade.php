@@ -9,28 +9,30 @@
         @forelse($groupedPrices as $typeName => $typePrices)
             <h3 class="fw-bold mt-20 text-primary">{{ $typeName }}</h3>
 
-            <table class="price-table mt-20">
-                <thead>
-                    <tr>
-                        <th>Класс</th>
-                        <th>Марка</th>
-                        <th>Цена за 1 \м³</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($typePrices as $index => $price)
+            <div class="table-scroll mt-20">
+                <table class="price-table">
+                    <thead>
                         <tr>
-                            <td class="fw-medium">
-                                {{ $price['grade_class'] }}
-                            </td>
-                            <td class="fw-medium">{{ $price['grade_name'] }}</td>
-                            <td>
-                                {{ $price['formatted_price'] }}
-                            </td>
+                            <th>Класс</th>
+                            <th>Марка</th>
+                            <th>Цена за 1 \м³</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach ($typePrices as $index => $price)
+                            <tr>
+                                <td class="fw-medium">
+                                    {{ $price['grade_class'] }}
+                                </td>
+                                <td class="fw-medium">{{ $price['grade_name'] }}</td>
+                                <td>
+                                    {{ $price['formatted_price'] }}
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
 
 
         @empty
