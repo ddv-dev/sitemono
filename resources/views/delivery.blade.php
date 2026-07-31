@@ -14,6 +14,4 @@
 
     @include('delivery.autopark')
 
-    @include('partials.footer')
-
 @endsection

@@ -32,6 +32,7 @@
 @import 'components/process-steps.css';
 @import 'components/tables.css';
 @import 'components/delivery.css';
+@import 'components/contacts.css';
 
 /* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
 @import 'layout/responsive.css';

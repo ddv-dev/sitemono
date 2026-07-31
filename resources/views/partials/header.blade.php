@@ -6,8 +6,9 @@
 
         <nav class="main-nav">
             <ul class="nav-links">
-                <li><a href="/concrete" class="{{ request()->routeIs('/concrete') ? 'active' : '' }}">Бетон</a></li>
+                <li><a href="/concrete" class="{{ request()->routeIs('concrete') ? 'active' : '' }}">Бетон</a></li>
                 <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
+                <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
                 <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
                 <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
                 <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
@@ -43,8 +44,9 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav>
         <ul class="mobile-nav-links">
-            <li><a href="/concrete" class="{{ request()->routeIs('/concrete') ? 'active' : '' }}">Бетон</a></li>
+            <li><a href="/concrete" class="{{ request()->routeIs('concrete') ? 'active' : '' }}">Бетон</a></li>
             <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
+            <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
             <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
             <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
             <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>

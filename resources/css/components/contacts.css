@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Страница «Контакты»
+   Значения токенов из макета Figma. Форма переиспользует .form-group /
+   .form-label / .form-control из layout/calculator.css.
+   ========================================================================== */
+
+/* Контактные карточки + адрес --------------------------------------------- */
+.contacts-info {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+}
+
+.contact-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+.contact-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 25px;
+    background: var(--color-white);
+    border: 1px solid #e5e3de;
+    border-radius: 18px;
+}
+
+.contact-ico {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-ico svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-ico-accent {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.contact-ico-dark {
+    background: var(--color-black);
+    color: #fff;
+}
+
+.contact-ico-light {
+    background: #f6f5f0;
+    color: var(--color-primary);
+}
+
+.contact-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.contact-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.contact-value {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+a.contact-value:hover {
+    color: var(--color-primary);
+}
+
+.contact-note {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Адрес + карта */
+.contact-address {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.contact-address-text {
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+.map-ph {
+    margin-top: 4px;
+    height: 328px;
+    border-radius: 18px;
+    background: #e5e3de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 16px;
+}
+
+.map-ph-pin {
+    width: 40px;
+    height: 40px;
+    color: #b0ada6;
+}
+
+.map-ph-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #b0ada6;
+}
+
+/* Форма связи ------------------------------------------------------------- */
+.contact-form {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 20px;
+}
+
+textarea.form-control {
+    min-height: 110px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.contact-form-submit {
+    width: 100%;
+    justify-content: center;
+    padding-block: 14px;
+    margin-top: 4px;
+}
+
+.contact-form-consent {
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Реквизиты --------------------------------------------------------------- */
+.req-wrap {
+    max-width: 640px;
+    overflow-x: auto;
+}
+
+.req-table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.req-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-shadow);
+    vertical-align: top;
+}
+
+.req-label {
+    width: 210px;
+    color: #888;
+    font-size: 14px;
+}
+
+.req-value {
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Телефон-CTA (тёмная секция) -------------------------------------------- */
+.phone-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.phone-cta-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.phone-cta-num {
+    display: block;
+    font-size: clamp(36px, 7vw, 72px);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-gray-cream);
+}
+
+.phone-cta-num:hover {
+    color: var(--color-primary);
+}
+
+.phone-cta-sub {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+.phone-cta-btn {
+    padding: 16px 28px;
+}
+
+/* Адаптив ----------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .contacts-info {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .contact-address {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form-row {
+        flex-direction: column;
+    }
+
+    .req-label {
+        width: 40%;
+    }
+
+    .map-ph {
+        height: 240px;
+    }
+}
