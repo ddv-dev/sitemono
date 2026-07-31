@@ -15,7 +15,7 @@ class ConcretePumpResource extends Resource
 {
     protected static ?string $model = ConcretePump::class;
     protected static ?string $navigationIcon = 'heroicon-o-truck';
-    protected static ?string $navigationGroup = 'Услуги';
+    protected static ?string $navigationGroup = 'Автобетононасосы и цены';
     protected static ?string $pluralLabel = 'Автобетононасосы';
     protected static ?string $label = 'Автобетононасос';
 
