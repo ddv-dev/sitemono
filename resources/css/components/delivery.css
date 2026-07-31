@@ -1,0 +1,290 @@
+/* ==========================================================================
+   Страница «Доставка»
+   Токены цветов зон взяты из макета Figma. Раскладка использует существующие
+   утилиты проекта (.container, .btn, .bg-black и т.д.), здесь — только то,
+   чего в системе ещё нет.
+   ========================================================================== */
+
+/* Метка секции: короткая линия + подпись (— Зоны доставки) */
+.sec-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 16px;
+}
+
+.sec-label-line {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-black);
+}
+
+.sec-label-dark .sec-label-line {
+    background: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Зоны доставки: карта + список
+   -------------------------------------------------------------------------- */
+.zones-layout {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.zone-map-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.zone-list-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Концентрические кольца зон (вложенные — размеры в % от родителя, адаптивно) */
+.zone-map {
+    position: relative;
+    width: min(380px, 82vw);
+    aspect-ratio: 1;
+}
+
+.zone-ring {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zone-ring-4 {
+    width: 100%;
+    height: 100%;
+    background: #f6f5f0;
+    border: 1px solid #e5e3de;
+}
+
+.zone-ring-3 {
+    width: 74%;
+    height: 74%;
+    background: #fff3e8;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.zone-ring-2 {
+    width: 70.3%;
+    height: 70.3%;
+    background: #fffde7;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.zone-ring-1 {
+    width: 57.7%;
+    height: 57.7%;
+    background: #e8f4ec;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.zone-center {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Подписи зон поверх колец */
+.zone-labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.zone-label {
+    position: absolute;
+    left: 57%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.zone-label b {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.zone-label span {
+    font-size: 9px;
+}
+
+.zone-label-4 {
+    top: 9%;
+    color: #888;
+}
+
+.zone-label-3 {
+    top: 20%;
+    color: var(--color-primary);
+}
+
+.zone-label-2 {
+    top: 31%;
+    color: #f9a825;
+}
+
+.zone-label-1 {
+    top: 41%;
+    color: #388e3c;
+}
+
+/* Карточки зон */
+.zone-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.zone-card-1 {
+    background: #e8f4ec;
+}
+
+.zone-card-2 {
+    background: #fffde7;
+}
+
+.zone-card-3 {
+    background: #fff3e8;
+}
+
+.zone-card-4 {
+    background: #f6f5f0;
+}
+
+.zone-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.zone-card-1 .zone-dot {
+    background: #388e3c;
+}
+
+.zone-card-2 .zone-dot {
+    background: #f9a825;
+}
+
+.zone-card-3 .zone-dot {
+    background: var(--color-primary);
+}
+
+.zone-card-4 .zone-dot {
+    background: #ccc;
+}
+
+.zone-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.zone-card-desc {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Города доставки
+   -------------------------------------------------------------------------- */
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 4px 20px;
+}
+
+.city-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--color-text);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.city-link:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
+
+.city-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Автопарк (тёмная секция)
+   -------------------------------------------------------------------------- */
+.autopark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.autopark-card {
+    background: var(--color-gray-dark);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 29px;
+}
+
+.autopark-num {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Адаптив
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .zones-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .zone-map-col {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    /* На узких экранах подписи поверх колец мешают — оставляем только карточки */
+    .zone-labels {
+        display: none;
+    }
+}

@@ -17,6 +17,9 @@ Route::get('/prices', [PriceController::class, 'index'])->name('prices');
 // Страница с автобетононасосами (используем PumpsController)
 Route::get('/pumps', [PumpsController::class, 'index'])->name('pumps');
 
+// Страница «Доставка» (статическая — данные в шаблоне)
+Route::view('/delivery', 'delivery')->name('delivery');
+
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');
 Route::get('/concrete', [CalculatorController::class, 'index'])->name('concrete')->defaults('page', 'concrete');
