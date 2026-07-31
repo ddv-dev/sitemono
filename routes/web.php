@@ -14,6 +14,7 @@ Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults(
 Route::get('/prices', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'prices');
 Route::get('/concrete', [CalculatorController::class, 'index'])->name('concrete')->defaults('page', 'concrete');
 Route::get('/pumps', [CalculatorController::class, 'index'])->name('pumps')->defaults('page', 'pumps');
+
 Route::get('/about', [CalculatorController::class, 'index'])->name('about')->defaults('page', 'about');
 Route::get('/contacts', [CalculatorController::class, 'index'])->name('contacts')->defaults('page', 'contacts');
 Route::get('/callback', [CalculatorController::class, 'index'])->name('callback')->defaults('page', 'callback');
