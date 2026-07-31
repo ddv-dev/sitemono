@@ -1,8 +1,8 @@
 <section class="container py-40 bg-cream">
 
-    <div class="fw-medium fs-18 mb-16">— Когда нужен насос </div>
+    <div class="fw-medium fs-18 mb-16">— Необходимость </div>
 
-    <h1 class="mb-36">3 ситуации, когда без АБН не обойтись</h1>
+    <h1 class="mb-36">Когда нужен АБН?</h1>
 
     <div class="f-flex row gap-20 jc-center ">
         <div class="choose-card">
