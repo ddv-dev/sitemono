@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Страница «О заводе»
+   Значения из макета Figma. Переиспользует .sec-label (components/delivery.css),
+   .container, .btn, bg-black / bg-cream и т.д.
+   ========================================================================== */
+
+/* Как устроено производство — степпер (тёмная секция) --------------------- */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.steps-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.step {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-label {
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.step-line {
+    flex: 1;
+    min-width: 20px;
+    height: 2px;
+    margin-top: 23px;
+    background: #2a2a2a;
+}
+
+.steps-row-2 {
+    justify-content: center;
+    gap: 160px;
+}
+
+/* Лаборатория ------------------------------------------------------------- */
+.lab-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.lab-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.lab-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.lab-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lab-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: #333;
+}
+
+.lab-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.lab-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.lab-stat {
+    background: #f6f5f0;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    min-height: 105px;
+}
+
+.lab-stat-num {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-text);
+}
+
+.lab-stat-label {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Производство — галерея фото --------------------------------------------- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.photo-ph {
+    height: 304px;
+    border-radius: 18px;
+    background: #eae8e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #b0ada6;
+}
+
+.photo-ph-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.photo-ph-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #b0ada6;
+}
+
+/* Документы и сертификаты -------------------------------------------------- */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.doc-card {
+    background: var(--color-white);
+    border: 1px solid #e5e3de;
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.doc-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.doc-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.doc-sub {
+    font-size: 14px;
+    color: #888;
+}
+
+.doc-download {
+    display: inline-flex;
+}
+
+/* Адаптив ----------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .lab-layout {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .lab-stats {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps {
+        gap: 20px;
+    }
+
+    .steps-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .step {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        width: auto;
+        gap: 16px;
+    }
+
+    .step-line {
+        display: none;
+    }
+
+    .steps-row-2 {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-ph {
+        height: 220px;
+    }
+}

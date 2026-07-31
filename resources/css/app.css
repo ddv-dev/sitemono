@@ -33,6 +33,7 @@
 @import 'components/tables.css';
 @import 'components/delivery.css';
 @import 'components/contacts.css';
+@import 'components/about.css';
 
 /* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
 @import 'layout/responsive.css';
