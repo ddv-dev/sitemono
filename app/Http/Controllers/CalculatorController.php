@@ -8,6 +8,7 @@ use App\Models\ConcreteType;
 use App\Models\ConcreteGrade;
 use App\Models\ConcretePrice;
 use App\Models\AdditionalService;
+use App\Models\ConcretePump;
 
 class CalculatorController extends Controller
 {
@@ -17,7 +18,7 @@ class CalculatorController extends Controller
         $grades = ConcreteGrade::active()->ordered()->get();
         $services = AdditionalService::active()->ordered()->get();
 
-        // Получаем все цены для таблицы (для partials.price)
+        // Получаем все цены для таблицы
         $prices = ConcretePrice::with(['type', 'grade'])
             ->active()
             ->get()
@@ -32,10 +33,24 @@ class CalculatorController extends Controller
                 ];
             });
 
+        // Получаем все насосы для таблицы
+        $pumps = ConcretePump::active()
+            ->ordered()
+            ->get()
+            ->map(function ($pump) {
+                return [
+                    'id' => $pump->id,
+                    'type' => $pump->type,
+                    'boom_length' => $pump->boom_length,
+                    'price_per_shift' => $pump->price_per_shift,
+                    'formatted_price' => number_format($pump->price_per_shift, 0, ',', ' ') . ' ₽',
+                    'application' => $pump->application,
+                ];
+            });
+
         $page = $request->route()->defaults['page'] ?? 'home';
-        
-        // Передаем все переменные в шаблон, включая $prices
-        return view($page, compact('types', 'grades', 'services', 'prices'));
+
+        return view($page, compact('types', 'grades', 'services', 'prices', 'pumps'));
     }
 
     public function calculate(Request $request)
