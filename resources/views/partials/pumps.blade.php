@@ -5,7 +5,7 @@
     <section class="container py-40">
         <div class="fw-medium fs-18 mb-16">— Прайс-лист</div>
 
-        <h1 class="mb-36">Цены на бетон</h1>
+        <h1 class="mb-36">Стоимость аренды автобетононасоса</h1>
 
         <table class="price-table mt-20">
             <thead>
@@ -41,8 +41,14 @@
                         </td>
                     </tr>
                 @endforelse
-                <p class="mt-20 ps-14 fw-medium">
-                    Минимальный заказ 3 м³. Цены указаны без учёта доставки.
-                </p>
+            </tbody>
+        </table>
+        <div class="d-flex column">
+
+                <p class="text-muted mt-16 fs-14">Доп. бетоновод +700 ₽ · Доп. шланг +2 000 ₽ · Гаситель +2 000 ₽ · Перестановка АБН +2 000 ₽</p>
+
+            <div class="card-green">Скидка 5% на насос при заказе нашего бетона</div>
+        </div>
+
     </section>
 @endif

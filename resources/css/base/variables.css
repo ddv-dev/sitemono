@@ -12,6 +12,8 @@
     --color-stroke-white: rgba(229, 227, 222, 1);
     --color-shadow: rgba(0, 0, 0, 0.1);
     --color-black: #111;
+    --color-green:rgba(22, 163, 74, 1); 
+    --color-green-light: rgba(237, 250, 243, 1);
 
     /* Шрифты */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
