@@ -34,6 +34,8 @@
 @import 'components/delivery.css';
 @import 'components/contacts.css';
 @import 'components/about.css';
+@import 'components/objects.css';
+@import 'components/companies.css';
 
 /* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
 @import 'layout/responsive.css';

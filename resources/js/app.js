@@ -2,6 +2,7 @@
 
 import './components/why-cards';
 import './components/nav';
+import './components/objects-filter';
 
 // Импортируем калькулятор
 import Calculator from './calculator/calculator.js';

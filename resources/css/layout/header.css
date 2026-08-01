@@ -43,7 +43,7 @@
 /* Навигация */
 .nav-links {
     display: flex;
-    gap: var(--spacing-xl);
+    gap: 22px;
     align-items: center;
 }
 
@@ -51,7 +51,8 @@
     text-decoration: none;
     color: var(--color-text-muted);
     font-weight: var(--font-weight-medium);
-    font-size: 16px;
+    font-size: 15px;
+    white-space: nowrap;
     transition: color 0.2s ease;
     position: relative;
 }
@@ -216,8 +217,9 @@
 
 /* ==========================================================================
    Планшет / телефон: сворачиваем навигацию в бургер
+   (порог выше десктопного, т.к. пунктов меню много)
    ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
     /* Компактная шапка: логотип + бургер, ниже — телефонная строка */
     .header {

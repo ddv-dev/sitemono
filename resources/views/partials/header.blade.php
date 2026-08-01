@@ -9,8 +9,10 @@
                 <li><a href="/concrete" class="{{ request()->routeIs('concrete') ? 'active' : '' }}">Бетон</a></li>
                 <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
                 <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
+                <li><a href="/objects" class="{{ request()->routeIs('objects') ? 'active' : '' }}">Объекты</a></li>
                 <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
                 <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
+                <li><a href="/companies" class="{{ request()->routeIs('companies') ? 'active' : '' }}">Компаниям</a></li>
                 <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
             </ul>
         </nav>
@@ -47,8 +49,10 @@
             <li><a href="/concrete" class="{{ request()->routeIs('concrete') ? 'active' : '' }}">Бетон</a></li>
             <li><a href="/pumps" class="{{ request()->routeIs('pumps') ? 'active' : '' }}">Насосы</a></li>
             <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
+            <li><a href="/objects" class="{{ request()->routeIs('objects') ? 'active' : '' }}">Объекты</a></li>
             <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
             <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
+            <li><a href="/companies" class="{{ request()->routeIs('companies') ? 'active' : '' }}">Компаниям</a></li>
             <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
         </ul>
     </nav>

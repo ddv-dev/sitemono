@@ -58,7 +58,7 @@ export function initMobileNav() {
 
     // Если экран расширили до десктопа — сбрасываем состояние
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 900) {
+        if (window.innerWidth > 1100) {
             closeMenu();
         }
     });

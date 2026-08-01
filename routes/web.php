@@ -6,6 +6,7 @@ use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\PumpsController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ObjectController;
 
 // Маршруты для калькулятора (API)
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
@@ -19,6 +20,12 @@ Route::get('/pumps', [PumpsController::class, 'index'])->name('pumps');
 
 // Страница «Доставка» (статическая — данные в шаблоне)
 Route::view('/delivery', 'delivery')->name('delivery');
+
+// Страница «Объекты» (реализованные объекты из БД)
+Route::get('/objects', [ObjectController::class, 'index'])->name('objects');
+
+// Страница «Компаниям» (B2B)
+Route::get('/companies', [ObjectController::class, 'companies'])->name('companies');
 
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');
