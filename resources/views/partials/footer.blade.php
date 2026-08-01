@@ -3,8 +3,8 @@
         <div class="ftr-top">
             <div class="ftr-brand-col">
                 <div class="ftr-brand fs-24 fw-bold text-cream">ПСМ Монолит</div>
-                <a href="tel:89915583888" class="ftr-phone fs-30 fw-bold text-cream">8 (991) 558-38-88</a>
-                <div class="ftr-address fs-14 text-muted">Одинцовский р-н, Луцинское шоссе 3А</div>
+                <a href="tel:{{ $company->phone_tel }}" class="ftr-phone fs-30 fw-bold text-cream">{{ $company->phone }}</a>
+                <div class="ftr-address fs-14 text-muted">{{ $company->address_short }}</div>
             </div>
 
             <div class="ftr-col">
@@ -43,7 +43,7 @@
 
         <div class="ftr-bottom">
             <span class="fs-14 text-muted">© {{ date('Y') }} ПСМ-Монолит. Все права защищены.</span>
-            <a href="tel:89915583888" class="fs-14 text-muted">8 (991) 558-38-88</a>
+            <a href="tel:{{ $company->phone_tel }}" class="fs-14 text-muted">{{ $company->phone }}</a>
         </div>
     </div>
 </footer>

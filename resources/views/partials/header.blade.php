@@ -18,7 +18,8 @@
         </nav>
 
         <div class="nav-actions">
-            <a href="/callback" class="btn btn-primary fw-semibold br-6">Заказать звонок</a>
+            <button type="button" class="btn btn-primary fw-semibold br-6" data-order="Заказать звонок">Заказать
+                звонок</button>
         </div>
 
         <button type="button" class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false"
@@ -32,11 +33,12 @@
     <div class="smm-line">
         <div class="smm-content items-center jc-sb pi-80">
             <div class=" d-flex smm-content-left gap-10">
-                <a href="tel:89915583888" class="text-white fw-bold fs-20">8 (991) 558-38-88</a>
-                <span class="fs-14 text-white d-flex items-center">Перезвоним за 4 минуты</span>
+                <a href="tel:{{ $company->phone_tel }}" class="text-white fw-bold fs-20">{{ $company->phone }}</a>
+                <span class="fs-14 text-white d-flex items-center">{{ $company->callback_note }}</span>
             </div>
             <div class="smm-content-right">
-                <button class="btn text-primary fs-18 fw-semibold btn-arrow-right br-6">Заказать бетон</button>
+                <button class="btn text-primary fs-18 fw-semibold btn-arrow-right br-6" data-order="Заказать бетон">Заказать
+                    бетон</button>
             </div>
         </div>
     </div>
@@ -58,9 +60,10 @@
     </nav>
 
     <div class="mobile-menu-footer">
-        <a href="tel:89915583888" class="text-primary fw-bold fs-22">8 (991) 558-38-88</a>
-        <span class="fs-14 text-muted">Перезвоним за 4 минуты</span>
-        <a href="/callback" class="btn btn-primary fw-semibold br-6 w-full text-center">Заказать звонок</a>
+        <a href="tel:{{ $company->phone_tel }}" class="text-primary fw-bold fs-22">{{ $company->phone }}</a>
+        <span class="fs-14 text-muted">{{ $company->callback_note }}</span>
+        <button type="button" class="btn btn-primary fw-semibold br-6 w-full text-center" data-order="Заказать звонок">Заказать
+            звонок</button>
     </div>
 </div>
 

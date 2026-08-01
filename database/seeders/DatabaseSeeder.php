@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
+            CompanySettingsSeeder::class,
             ObjectsSeeder::class,
+            DocumentsSeeder::class,
         ]);
     }
 }

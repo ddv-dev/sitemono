@@ -7,6 +7,7 @@ use App\Http\Controllers\PriceController;
 use App\Http\Controllers\PumpsController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ObjectController;
+use App\Http\Controllers\OrderController;
 
 // Маршруты для калькулятора (API)
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
@@ -26,6 +27,9 @@ Route::get('/objects', [ObjectController::class, 'index'])->name('objects');
 
 // Страница «Компаниям» (B2B)
 Route::get('/companies', [ObjectController::class, 'companies'])->name('companies');
+
+// Приём заявок со всех форм сайта
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');

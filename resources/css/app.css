@@ -36,6 +36,7 @@
 @import 'components/about.css';
 @import 'components/objects.css';
 @import 'components/companies.css';
+@import 'components/order.css';
 
 /* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
 @import 'layout/responsive.css';

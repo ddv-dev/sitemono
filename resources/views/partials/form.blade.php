@@ -5,16 +5,20 @@
                <div class="fs-26 fw-bold text-cream">
                    Оставьте заявку
                </div>
-               <p class="fs-16 text-cream">Перезвоним за 4 минуты. Уточним объём, марку и сроки. Назовём
+               <p class="fs-16 text-cream">{{ $company->callback_note }}. Уточним объём, марку и сроки. Назовём
                    финальную цену.</p>
            </span>
            <div class="">
-               <form action="">
+               <form class="js-order-form" action="{{ route('orders.store') }}" method="POST"
+                   data-success-text="Заявка принята! Перезвоним в течение 4 минут.">
+                   @csrf
+                   <input type="hidden" name="source" value="Заявка — Оставьте заявку">
                    <div class="row gap-20 py-20">
-                       <input type="text" class="input-black d-flex flex-1" placeholder="Имя">
-                       <input type="text" class="input-black d-flex flex-1" placeholder="Номер телефона">
+                       <input type="text" name="name" class="input-black d-flex flex-1" placeholder="Имя">
+                       <input type="tel" name="phone" class="input-black d-flex flex-1" placeholder="Номер телефона"
+                           required>
                    </div>
-                   <input type="text" class="input-black d-flex flex-1" placeholder="Адрес доставки">
+                   <input type="text" name="address" class="input-black d-flex flex-1" placeholder="Адрес доставки">
                    <div class="row gap-20 py-20 items-center">
 
                        <input type="submit" class="btn btn-primary btn-arrow-right-white br-8"

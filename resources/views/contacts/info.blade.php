@@ -13,8 +13,8 @@
                     </div>
                     <div class="contact-card-body">
                         <div class="contact-label">Телефон</div>
-                        <a href="tel:89915583888" class="contact-value fs-28">8 (991) 558-38-88</a>
-                        <div class="contact-note">Перезвоним за 4 минуты</div>
+                        <a href="tel:{{ $company->phone_tel }}" class="contact-value fs-28">{{ $company->phone }}</a>
+                        <div class="contact-note">{{ $company->callback_note }}</div>
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@
                     </div>
                     <div class="contact-card-body">
                         <div class="contact-label">WhatsApp / Telegram</div>
-                        <a href="tel:89915583888" class="contact-value fs-18">8 (991) 558-38-88</a>
+                        <a href="tel:{{ $company->phone_tel }}" class="contact-value fs-18">{{ $company->phone }}</a>
                         <div class="contact-note">Принимаем заявки в мессенджерах</div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="contact-card-body">
                         <div class="contact-label">Email</div>
-                        <a href="mailto:info@psm-monolit.ru" class="contact-value fs-18">info@psm-monolit.ru</a>
+                        <a href="mailto:{{ $company->email }}" class="contact-value fs-18">{{ $company->email }}</a>
                         <div class="contact-note">Для деловой переписки</div>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
                     </div>
                     <div class="contact-card-body">
                         <div class="contact-label">Режим работы</div>
-                        <div class="contact-value fs-18">Пн–Вс, 07:00–22:00</div>
-                        <div class="contact-note">Производство — 24/7</div>
+                        <div class="contact-value fs-18">{{ $company->work_hours }}</div>
+                        <div class="contact-note">{{ $company->production_note }}</div>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="contact-address">
                 <div class="contact-label">Адрес завода</div>
                 <div class="contact-address-text fs-18 fw-bold">
-                    МО, Одинцовский район,<br>Луцинское шоссе, 3А
+                    {{ $company->production_address }}
                 </div>
                 <div class="map-ph">
                     <svg class="map-ph-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

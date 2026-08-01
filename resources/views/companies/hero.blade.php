@@ -13,7 +13,8 @@
         </p>
 
         <div class="row gap-20 mt-20 f-wrap">
-            <a href="/callback" class="btn btn-primary btn-arrow-right-white fs-18 fw-semibold br-20">Запросить КП</a>
+            <button type="button" class="btn btn-primary btn-arrow-right-white fs-18 fw-semibold br-20"
+                data-order="Запросить КП">Запросить КП</button>
             <a href="#b2b-conditions" class="btn btn-primary-white fs-18 fw-semibold">Условия сотрудничества</a>
         </div>
 

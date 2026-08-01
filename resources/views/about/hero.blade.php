@@ -11,7 +11,8 @@
         </p>
 
         <div class="row gap-20 mt-20 f-wrap">
-            <a href="/callback" class="btn btn-primary btn-arrow-right-white fs-18 fw-semibold br-20">Заказать бетон</a>
+            <button type="button" class="btn btn-primary btn-arrow-right-white fs-18 fw-semibold br-20"
+                data-order="Заказать бетон">Заказать бетон</button>
             <a href="#documents" class="btn btn-primary-white fs-18 fw-semibold">Скачать сертификаты</a>
         </div>
     </div>

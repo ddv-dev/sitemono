@@ -64,9 +64,10 @@
                 </div>
             </div>
 
-            <a href="/callback" class="btn btn-primary fs-16 fw-semibold br-20 mt-8 text-center">
+            <button type="button" class="btn btn-primary fs-16 fw-semibold br-20 mt-8 text-center"
+                data-order="Доставка — узнать стоимость">
                 Узнать стоимость для моего адреса
-            </a>
+            </button>
         </div>
     </div>
 </section>

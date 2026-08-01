@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Заявки: модальное окно + состояния форм
+   ========================================================================== */
+
+/* Модальное окно ---------------------------------------------------------- */
+.order-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-modal-overlay.is-open {
+    display: flex;
+}
+
+.order-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: var(--color-white);
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.order-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.order-modal-close:hover {
+    background: var(--color-gray-cream);
+    color: var(--color-text);
+}
+
+.order-modal-title {
+    color: var(--color-text);
+}
+
+.order-modal-sub {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.order-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-modal-form .js-order-submit {
+    margin-top: 4px;
+    padding-block: 12px;
+}
+
+/* Состояния форм ---------------------------------------------------------- */
+.form-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.form-control.is-invalid,
+.input-black.is-invalid {
+    border-color: #dc2626 !important;
+}
+
+.form-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 8px;
+}
+
+.form-success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-green-light);
+    color: var(--color-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.form-success p {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+/* На тёмной панели (Оставьте заявку) success-текст должен быть светлым */
+.panel-black .form-success p {
+    color: var(--color-gray-cream);
+}
