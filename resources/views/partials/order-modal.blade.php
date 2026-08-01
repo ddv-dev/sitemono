@@ -20,7 +20,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Комментарий</label>
-                    <textarea name="message" class="form-control" rows="2" placeholder="Объём, марка, адрес…"></textarea>
+                    <textarea name="message" class="form-control" rows="3" placeholder="Объём, марка, адрес…"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary br-8 fw-semibold w-full text-center js-order-submit">

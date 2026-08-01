@@ -4,6 +4,7 @@ import './components/why-cards';
 import './components/nav';
 import './components/objects-filter';
 import './components/order';
+import './components/reveal';
 
 // Импортируем калькулятор
 import Calculator from './calculator/calculator.js';

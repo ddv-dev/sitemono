@@ -126,17 +126,48 @@ class Calculator {
         });
     }
 
-    // Отправка формы
+    // Отправка формы — собираем параметры и открываем модалку заявки
     submitForm() {
-        const data = {
-            type_id: this.typeSelect.value,
-            grade_id: this.gradeSelect.value,
-            volume: parseFloat(this.volumeInput.value) || 0,
-            total_price: this.totalPriceEl.textContent
-        };
+        const summary = this.buildSummary();
 
-        console.log('Отправка заказа:', data);
-        alert('✅ Заказ отправлен! Наш менеджер свяжется с вами в ближайшее время.');
+        if (window.PSMOrderModal) {
+            window.PSMOrderModal.open('Калькулятор', summary);
+        } else {
+            // Резерв, если модалка недоступна
+            alert('Заявка: \n' + summary);
+        }
+    }
+
+    // Текстовое описание выбранных параметров для заявки
+    buildSummary() {
+        const lines = [];
+
+        if (this.typeSelect.value) {
+            lines.push('Тип работ: ' + this.typeSelect.options[this.typeSelect.selectedIndex].text.trim());
+        }
+        if (this.gradeSelect.value) {
+            lines.push('Марка бетона: ' + this.gradeSelect.options[this.gradeSelect.selectedIndex].text.trim());
+        }
+
+        const volume = this.volumeInput.value;
+        if (volume) {
+            lines.push('Объём: ' + volume + ' м³');
+        }
+
+        const services = Array.from(document.querySelectorAll('.service-checkbox:checked')).map((cb) => {
+            const label = cb.closest('.service-switch')?.querySelector('.service-label');
+            return label ? label.textContent.trim() : null;
+        }).filter(Boolean);
+        if (services.length) {
+            lines.push('Доп. услуги: ' + services.join(', '));
+        }
+
+        const price = this.totalPriceEl.textContent.trim();
+        if (price && price !== '— ₽' && price !== '...') {
+            lines.push('Расчётная стоимость: ' + price);
+        }
+
+        return lines.join('\n');
     }
 
     // Первый расчет

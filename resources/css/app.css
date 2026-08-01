@@ -9,6 +9,7 @@
 @import 'base/variables.css';
 @import 'base/reset.css';
 @import 'base/typography.css';
+@import 'base/animations.css';
 
 /* Layout */
 @import 'layout/header.css';

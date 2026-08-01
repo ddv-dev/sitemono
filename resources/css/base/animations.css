@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Базовые анимации: появление при скролле + ховеры карточек.
+   Всё уважает prefers-reduced-motion.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Появление при скролле (класс .reveal добавляется через reveal.js,
+   поэтому без JS контент всегда виден)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Ховер карточек (светлые секции) — лёгкое приподнимание + тень
+   -------------------------------------------------------------------------- */
+.panel-white,
+.choose-card,
+.qualities-card,
+.terms-card,
+.cars-card,
+.zone-card,
+.obj-card,
+.b2b-card,
+.doc-card,
+.contact-card,
+.lab-stat,
+.photo-ph {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.panel-white:hover,
+.choose-card:hover,
+.qualities-card:hover,
+.terms-card:hover,
+.cars-card:hover,
+.zone-card:hover,
+.obj-card:hover,
+.b2b-card:hover,
+.doc-card:hover,
+.contact-card:hover,
+.lab-stat:hover,
+.photo-ph:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(244, 123, 32, 0.35);
+}
+
+/* Карточка-документ как ссылка — курсор-указатель */
+a.doc-card {
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Ховер карточек на тёмных секциях — подсветка рамки вместо тени
+   -------------------------------------------------------------------------- */
+.autopark-card,
+.dark-card {
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.autopark-card:hover,
+.dark-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 123, 32, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Иконка-стрелка у кнопок чуть сдвигается при наведении
+   -------------------------------------------------------------------------- */
+.btn-arrow-right-white::after,
+.btn-arrow-right::after {
+    transition: transform 0.2s ease;
+}
+
+.btn-arrow-right-white:hover::after,
+.btn-arrow-right:hover::after {
+    transform: translateX(4px);
+}

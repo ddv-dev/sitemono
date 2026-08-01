@@ -106,15 +106,18 @@ async function submitOrderForm(form) {
     }
 }
 
-function initOrderForms() {
-    attachPhoneInputs();
-
-    document.querySelectorAll('.js-order-form').forEach((form) => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            submitOrderForm(form);
-        });
+function bindOrderForm(form) {
+    if (form.dataset.bound) return;
+    form.dataset.bound = '1';
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitOrderForm(form);
     });
+}
+
+function initOrderForms(root = document) {
+    attachPhoneInputs(root);
+    root.querySelectorAll('.js-order-form').forEach(bindOrderForm);
 }
 
 // ---- Модальное окно ----
@@ -122,18 +125,28 @@ function initOrderModal() {
     const overlay = document.getElementById('orderModal');
     if (!overlay) return;
 
-    const titleEl = overlay.querySelector('.order-modal-title');
-    const sourceEl = overlay.querySelector('[data-order-source]');
+    const body = overlay.querySelector('.js-order-body');
+    const originalHTML = body.innerHTML; // чтобы восстановить свежую форму после успеха
 
-    function open(source) {
-        if (source) {
-            if (sourceEl) sourceEl.value = source;
-            if (titleEl) titleEl.textContent = source;
-        }
+    function open(source, message) {
+        // Восстанавливаем форму (на случай, если ранее показали «успех»)
+        body.innerHTML = originalHTML;
+
+        const titleEl = body.querySelector('.order-modal-title');
+        const sourceEl = body.querySelector('[data-order-source]');
+        const msgEl = body.querySelector('textarea[name="message"]');
+
+        if (sourceEl && source) sourceEl.value = source;
+        if (titleEl) titleEl.textContent = message ? 'Оформить заказ' : (source || 'Оставьте заявку');
+        if (msgEl && message) msgEl.value = message;
+
+        initOrderForms(body);
+
         overlay.classList.add('is-open');
         overlay.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
-        const phone = overlay.querySelector('input[type="tel"]');
+
+        const phone = body.querySelector('input[type="tel"]');
         if (phone) setTimeout(() => phone.focus(), 50);
     }
 
@@ -142,6 +155,9 @@ function initOrderModal() {
         overlay.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
     }
+
+    // Доступ извне (например, из калькулятора)
+    window.PSMOrderModal = { open, close };
 
     document.addEventListener('click', (e) => {
         const trigger = e.target.closest('[data-order]');
