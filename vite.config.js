@@ -7,11 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/calculator/calculator.js',
-                'resources/js/calculator/init.js',
             ],
             refresh: true,
         }),
     ],
-
 });

@@ -1,5 +1,4 @@
 <?php
-// database/migrations/2026_07_31_000000_create_faq_themes_table.php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -7,12 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up(): void
+    public function up()
     {
-        Schema::create('faq_themes', function (Blueprint $table) {
+        Schema::create('concrete_grades', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('class')->nullable();
+            $table->string('full_name')->nullable();
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(0);
@@ -20,8 +20,8 @@ return new class extends Migration
         });
     }
 
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('faq_themes');
+        Schema::dropIfExists('concrete_grades');
     }
 };
