@@ -22,6 +22,8 @@ const SELECTORS = [
     '.lab-stat',
     '.photo-ph',
     '.step',
+    '.winter-step',
+    '.winter-feature',
 ].join(',');
 
 export function initReveal() {

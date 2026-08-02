@@ -14,7 +14,7 @@
                     <li><a href="/concrete">М300</a></li>
                     <li><a href="/concrete">М350</a></li>
                     <li><a href="/concrete">М400</a></li>
-                    <li><a href="/concrete">Зимний</a></li>
+                    <li><a href="/winter-concrete">Зимний бетон</a></li>
                 </ul>
             </div>
 

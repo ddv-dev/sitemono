@@ -23,6 +23,9 @@ Route::get('/pumps', [PumpsController::class, 'index'])->name('pumps');
 // Страница «Доставка» (статическая — данные в шаблоне)
 Route::view('/delivery', 'delivery')->name('delivery');
 
+// Страница «Зимний бетон»
+Route::view('/winter-concrete', 'winter')->name('winter');
+
 // Страница «Объекты» (реализованные объекты из БД)
 Route::get('/objects', [ObjectController::class, 'index'])->name('objects');
 

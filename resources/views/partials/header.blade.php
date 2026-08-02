@@ -11,9 +11,20 @@
                 <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
                 <li><a href="/objects" class="{{ request()->routeIs('objects') ? 'active' : '' }}">Объекты</a></li>
                 <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
-                <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
                 <li><a href="/companies" class="{{ request()->routeIs('companies') ? 'active' : '' }}">Компаниям</a></li>
-                <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
+                <li class="nav-dropdown-item">
+                    <a href="/about" class="nav-dropdown-trigger {{ request()->routeIs('about', 'contacts') ? 'active' : '' }}">
+                        О заводе
+                        <svg class="nav-caret" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m1 1 5 5 5-5" />
+                        </svg>
+                    </a>
+                    <ul class="nav-dropdown">
+                        <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
+                        <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -53,9 +64,14 @@
             <li><a href="/delivery" class="{{ request()->routeIs('delivery') ? 'active' : '' }}">Доставка</a></li>
             <li><a href="/objects" class="{{ request()->routeIs('objects') ? 'active' : '' }}">Объекты</a></li>
             <li><a href="/prices" class="{{ request()->routeIs('prices') ? 'active' : '' }}">Цены</a></li>
-            <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
             <li><a href="/companies" class="{{ request()->routeIs('companies') ? 'active' : '' }}">Компаниям</a></li>
-            <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
+            <li class="mobile-nav-group">
+                <span class="mobile-nav-grouptitle">О заводе</span>
+                <ul class="mobile-subnav">
+                    <li><a href="/about" class="{{ request()->routeIs('about') ? 'active' : '' }}">О заводе</a></li>
+                    <li><a href="/contacts" class="{{ request()->routeIs('contacts') ? 'active' : '' }}">Контакты</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 

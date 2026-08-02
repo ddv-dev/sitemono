@@ -35,7 +35,8 @@
 .doc-card,
 .contact-card,
 .lab-stat,
-.photo-ph {
+.photo-ph,
+.winter-feature {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -50,7 +51,8 @@
 .doc-card:hover,
 .contact-card:hover,
 .lab-stat:hover,
-.photo-ph:hover {
+.photo-ph:hover,
+.winter-feature:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
     border-color: rgba(244, 123, 32, 0.35);
