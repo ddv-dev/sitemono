@@ -2,7 +2,7 @@
 
     <div class="fw-medium fs-18 mb-16">— Марки бетона</div>
 
-    <h1 class="mb-36">Подберём марку под вашу задачу </h1>
+    <h2 class="fs-40 fw-bold mb-36">Подберём марку под вашу задачу</h2>
 
     <div class="f-flex row gap-20 jc-center ">
         <div class="choose-card">

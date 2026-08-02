@@ -1,6 +1,6 @@
 <section class="container py-40 bg-black">
 
-    <h1 class="text-cream fs-40 fw-bold mb-20">Почему не стоит рисковать с маркой бетона?</h1>
+    <h2 class="text-cream fs-40 fw-bold mb-20">Почему не стоит рисковать с маркой бетона?</h2>
     <p class="text-cream fw-medium fs-16 line-h-140">На рынке МО распространена практика занижения марки — вам привозят
         М250 вместо
         М300. <br> Без

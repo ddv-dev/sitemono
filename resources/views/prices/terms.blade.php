@@ -1,7 +1,7 @@
 <section class="container py-40">
     <div class="fw-medium fs-18 mb-16">— Оплата</div>
 
-    <h1 class="mb-36 fs-40">Условия оплаты</h1>
+    <h2 class="mb-36 fs-40 fw-bold">Условия оплаты</h2>
 
     <div class="d-flex row gap-40">
         <div class="terms-card">

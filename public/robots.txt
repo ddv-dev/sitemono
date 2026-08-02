@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /adminmono
+Disallow: /orders
+
+Sitemap: https://psm-monolit.ru/sitemap.xml

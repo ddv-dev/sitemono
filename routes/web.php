@@ -8,6 +8,7 @@ use App\Http\Controllers\PumpsController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ObjectController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SitemapController;
 
 // Маршруты для калькулятора (API)
 Route::post('/calculator/calculate', [CalculatorController::class, 'calculate'])->name('calculator.calculate');
@@ -30,6 +31,10 @@ Route::get('/companies', [ObjectController::class, 'companies'])->name('companie
 
 // Приём заявок со всех форм сайта
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+
+// Карта сайта
+Route::get('/sitemap.xml', [SitemapController::class, 'xml'])->name('sitemap.xml');
+Route::get('/sitemap', [SitemapController::class, 'html'])->name('sitemap');
 
 // Основные страницы (через CalculatorController)
 Route::get('/', [CalculatorController::class, 'index'])->name('home')->defaults('page', 'home');

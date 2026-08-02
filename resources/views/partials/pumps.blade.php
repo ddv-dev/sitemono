@@ -2,8 +2,8 @@
 
 
 @if (isset($pumps) && $pumps->count() > 0)
-    <section class="container py-40">
-        <h1 class="mb-36">Стоимость аренды автобетононасоса</h1>
+    <section class="container py-40" id="pumps-table">
+        <h2 class="fs-40 fw-bold mb-36">Стоимость аренды автобетононасоса</h2>
 
         <div class="table-scroll mt-20">
             <table class="price-table">

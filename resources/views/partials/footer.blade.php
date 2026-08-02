@@ -37,6 +37,7 @@
                     <li><a href="/about">Сертификаты</a></li>
                     <li><a href="/about">Отзывы</a></li>
                     <li><a href="/contacts">Контакты</a></li>
+                    <li><a href="/sitemap">Карта сайта</a></li>
                 </ul>
             </div>
         </div>

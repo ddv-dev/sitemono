@@ -1,7 +1,7 @@
 @if (isset($prices) && $prices->count() > 0)
-    <section class="container py-40">
+    <section class="container py-40" id="prices-table">
 
-        <h1 class="mb-36">Цены на бетон</h1>
+        <h2 class="fs-40 fw-bold mb-36">Цены на бетон</h2>
         @php
             $groupedPrices = $prices->groupBy('type_name');
         @endphp

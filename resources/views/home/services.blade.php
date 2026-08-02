@@ -4,7 +4,7 @@
                 <h3 class="fs-40 fw-bold">Всё, что нужно для стройки</h3>
                 <p class="line-h-140">Собственный завод — никаких посредников и наценок. Один звонок закрывает бетон и
                     насос.</p>
-                <a href="" class="btn btn-black btn-arrow-right-white ">Смотреть цены</a>
+                <a href="/prices" class="btn btn-black btn-arrow-right-white ">Смотреть цены</a>
             </div>
 
             <div class="grid-container flex-2">

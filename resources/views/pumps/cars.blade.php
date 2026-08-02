@@ -2,7 +2,7 @@
 
     <div class="fw-medium fs-18 mb-16 text-muted">— Парк техники</div>
 
-    <h1 class="mb-36 text-cream">Наша технкиа </h1>
+    <h2 class="fs-40 fw-bold mb-36 text-cream">Наша техника</h2>
 
 
     <div class="cars-card-container">
