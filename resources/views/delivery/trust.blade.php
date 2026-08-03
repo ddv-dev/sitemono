@@ -16,18 +16,12 @@
             </div>
             <div class="d-flex items-center gap-10">
                 <div class="hero-block-icon-container">
-                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/done-outline.svg') }}"
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/done.svg') }}"
                         alt="SMS за 30 мин до приезда">
                 </div>
                 <span class="fs-16 text-default fw-medium">SMS за 30 мин до приезда</span>
             </div>
-            <div class="d-flex items-center gap-10">
-                <div class="hero-block-icon-container">
-                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
-                        alt="14 миксеров в парке">
-                </div>
-                <span class="fs-16 text-default fw-medium">14 миксеров в парке</span>
-            </div>
+
         </div>
     </div>
 </section>

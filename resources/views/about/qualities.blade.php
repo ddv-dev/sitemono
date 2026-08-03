@@ -9,7 +9,7 @@
             </div>
             <div class="d-flex items-center gap-10">
                 <div class="hero-block-icon-container">
-                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/big-car.svg') }}"
+                    <img class="hero-block-icon" src="{{ asset('images/ui/icons/cars.svg') }}"
                         alt="21 единица техники">
                 </div>
                 <span class="fs-16 text-default fw-medium">21 единица техники</span>

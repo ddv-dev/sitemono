@@ -69,14 +69,7 @@
                 <div class="contact-address-text fs-18 fw-bold">
                     {{ $company->production_address }}
                 </div>
-                <div class="map-ph">
-                    <svg class="map-ph-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    <span class="map-ph-text">Схема проезда (добавьте Яндекс.Карту или Google Maps)</span>
-                </div>
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A290124b5923cf8d87c76549d919d17848ab51993f2e33bd3615af110013a271e&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
             </div>
         </div>
     </div>

@@ -35,7 +35,5 @@
                 @endforeach
             @endforelse
         </div>
-
-        <p class="fs-14 text-muted mt-20">Фото добавляются в админке (раздел «Фото завода»).</p>
     </div>
 </section>

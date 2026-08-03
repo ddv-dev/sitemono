@@ -10,7 +10,7 @@
                     <div class="zone-ring zone-ring-3">
                         <div class="zone-ring zone-ring-2">
                             <div class="zone-ring zone-ring-1">
-                                <div class="zone-center">ЗАВОД</div>
+                                <div class="zone-center">МОСКВА</div>
                             </div>
                         </div>
                     </div>
