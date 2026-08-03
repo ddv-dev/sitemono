@@ -26,6 +26,11 @@
                 <button type="submit" class="btn btn-primary br-8 fw-semibold w-full text-center js-order-submit">
                     Отправить заявку
                 </button>
+
+                <p class="order-modal-consent fs-12 text-muted mt-12 text-center">
+                    Нажимая кнопку, вы соглашаетесь с
+                    <a href="{{ route('privacy') }}" class="text-primary">политикой обработки персональных данных</a>
+                </p>
             </form>
         </div>
     </div>

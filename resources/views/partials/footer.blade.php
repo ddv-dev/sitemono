@@ -44,7 +44,7 @@
 
         <div class="ftr-bottom">
             <span class="fs-14 text-muted">© {{ date('Y') }} ПСМ-Монолит. Все права защищены.</span>
-            <a href="tel:{{ $company->phone_tel }}" class="fs-14 text-muted">{{ $company->phone }}</a>
+            <a href="{{ route('privacy') }}" class="fs-14 text-muted">Политика обработки персональных данных</a>
         </div>
     </div>
 </footer>

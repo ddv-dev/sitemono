@@ -19,6 +19,7 @@ class SitemapController extends Controller
             ['companies', '0.7', 'monthly'],
             ['about', '0.6', 'monthly'],
             ['contacts', '0.6', 'monthly'],
+            ['privacy', '0.3', 'yearly'],
         ];
     }
 
@@ -53,6 +54,7 @@ class SitemapController extends Controller
             'companies' => 'Компаниям',
             'about' => 'О заводе',
             'contacts' => 'Контакты',
+            'privacy' => 'Политика обработки персональных данных',
         ];
 
         $links = collect($this->pages())->map(fn ($p) => [

@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Правовые / текстовые страницы (Политика обработки персональных данных)
+   Читаемая типографика длинного текста. Переиспользует .container, .sec-label.
+   ========================================================================== */
+
+/* Узкая колонка для комфортного чтения длинного текста */
+.container-narrow {
+    max-width: 860px;
+    margin-inline: auto;
+}
+
+.legal-meta {
+    border-bottom: 1px solid #e5e3de;
+    padding-bottom: 24px;
+}
+
+.legal-body {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+}
+
+.legal-body h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+.legal-body h2:first-child {
+    margin-top: 0;
+}
+
+.legal-body p {
+    margin-bottom: 16px;
+}
+
+.legal-body ul {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legal-body ul li {
+    position: relative;
+    padding-left: 22px;
+}
+
+.legal-body ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.legal-body a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.legal-body a:hover {
+    opacity: 0.8;
+}
+
+/* Реквизиты Оператора — «метка: значение» */
+.legal-req li {
+    padding-left: 22px;
+}
+
+.legal-req li span {
+    display: inline-block;
+    min-width: 210px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+    .legal-body {
+        font-size: 15px;
+    }
+
+    .legal-body h2 {
+        font-size: 19px;
+        margin-top: 28px;
+    }
+
+    .legal-req li span {
+        min-width: 0;
+        display: block;
+        margin-bottom: 2px;
+    }
+}

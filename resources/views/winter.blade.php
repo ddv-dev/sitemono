@@ -115,6 +115,11 @@
                     class="btn btn-primary btn-arrow-right-white br-8 fw-semibold mt-20 winter-form-btn">
                     Получить расчёт стоимости
                 </button>
+
+                <p class="fs-12 mt-16" style="color: #9a9a9a;">
+                    Нажимая кнопку, вы соглашаетесь с
+                    <a href="{{ route('privacy') }}" class="text-primary">политикой обработки персональных данных</a>
+                </p>
             </form>
         </div>
     </section>

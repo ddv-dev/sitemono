@@ -27,6 +27,9 @@ Route::view('/delivery', 'delivery')->name('delivery');
 // Страница «Зимний бетон»
 Route::view('/winter-concrete', 'winter')->name('winter');
 
+// Политика обработки персональных данных (152-ФЗ) — статическая страница
+Route::view('/privacy-policy', 'privacy')->name('privacy');
+
 // Страница «Объекты» (реализованные объекты из БД)
 Route::get('/objects', [ObjectController::class, 'index'])->name('objects');
 

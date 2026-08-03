@@ -23,9 +23,9 @@
 
                        <input type="submit" class="btn btn-primary btn-arrow-right-white br-8"
                            value="Получить расчёт стоимости">
-                       <span class="fs-12  text-muted">Нажимая кнопку, вы соглашаетесь с <a href=""
-                               class="text-primary" style="opacity: 0.8"> политикой
-                               конфиденциальности</a></span>
+                       <span class="fs-12  text-muted">Нажимая кнопку, вы соглашаетесь с <a
+                               href="{{ route('privacy') }}" class="text-primary" style="opacity: 0.8">политикой
+                               обработки персональных данных</a></span>
                    </div>
                </form>
 

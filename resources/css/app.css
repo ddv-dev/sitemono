@@ -39,6 +39,7 @@
 @import 'components/companies.css';
 @import 'components/order.css';
 @import 'components/winter.css';
+@import 'components/legal.css';
 
 /* Responsive (последним — переопределяет десктопные правила на планшетах/телефонах) */
 @import 'layout/responsive.css';

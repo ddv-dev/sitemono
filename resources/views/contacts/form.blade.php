@@ -46,7 +46,7 @@
 
             <p class="fs-12 text-muted contact-form-consent">
                 Нажимая кнопку, вы соглашаетесь с
-                <a href="#" class="text-primary">политикой обработки персональных данных</a>
+                <a href="{{ route('privacy') }}" class="text-primary">политикой обработки персональных данных</a>
             </p>
         </form>
     </div>
