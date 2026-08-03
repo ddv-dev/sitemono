@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use App\Models\CompanySetting;
 use App\Models\Document;
+use App\Models\FactoryPhoto;
 use App\Services\FaqService;
 
 
@@ -53,6 +54,21 @@ class AppServiceProvider extends ServiceProvider
             }
 
             $view->with('documents', $documents);
+        });
+
+        // Фото завода для страницы «О заводе»
+        View::composer('about.production', function ($view) {
+            $factoryPhotos = collect();
+
+            try {
+                if (Schema::hasTable('factory_photos')) {
+                    $factoryPhotos = FactoryPhoto::query()->active()->ordered()->get();
+                }
+            } catch (\Throwable $e) {
+                // БД ещё не готова
+            }
+
+            $view->with('factoryPhotos', $factoryPhotos);
         });
     }
 }

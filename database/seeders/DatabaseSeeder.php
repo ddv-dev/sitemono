@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CompanySettingsSeeder::class,
             ObjectsSeeder::class,
             DocumentsSeeder::class,
+            FactoryPhotosSeeder::class,
         ]);
     }
 }
