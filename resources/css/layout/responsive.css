@@ -65,6 +65,15 @@
     .container.row {
         flex-direction: column;
     }
+
+    /* Блок преимуществ под hero: центрированный перенос ломался в «3+1».
+       Ровная сетка 2×2 с выравниванием иконок по колонкам */
+    .hero-block-bottom-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        gap: 18px 32px;
+    }
 }
 
 /* ==========================================================================
@@ -127,6 +136,14 @@
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
+    }
+
+    /* Преимущества под hero: одна колонка, иконки выровнены слева */
+    .hero-block-bottom-wrapper {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        max-width: 340px;
+        margin-inline: auto;
     }
 }
 
