@@ -2,6 +2,7 @@
 // routes/web.php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\PumpsController;
@@ -34,6 +35,17 @@ Route::get('/companies', [ObjectController::class, 'companies'])->name('companie
 
 // Приём заявок со всех форм сайта
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+
+// Отдача загруженных файлов (фото объектов, документы) через PHP —
+// надёжнее симлинка public/storage, который на многих хостингах отдаёт 403.
+Route::get('/media/{path}', function (string $path) {
+    $disk = Storage::disk('public');
+    abort_unless($disk->exists($path), 404);
+
+    return $disk->response($path, null, [
+        'Cache-Control' => 'public, max-age=604800',
+    ]);
+})->where('path', '.*')->name('media');
 
 // Карта сайта
 Route::get('/sitemap.xml', [SitemapController::class, 'xml'])->name('sitemap.xml');
